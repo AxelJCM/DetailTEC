@@ -10,6 +10,8 @@ import { GestpuntosComponent } from './gestpuntos/gestpuntos.component';
 
 const appRoutes:Routes=[
   {path: '', component:LoginComponent}
+,{path: 'menucliente', component:MenuclienteComponent}
+,{path: '', component:GestpuntosComponent}
 ]
 
 @NgModule({

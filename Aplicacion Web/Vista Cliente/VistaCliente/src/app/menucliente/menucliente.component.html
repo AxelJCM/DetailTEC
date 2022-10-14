@@ -1,123 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Menu: VistaCliente</title>
-        <!-- Bootstrap -->
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="menucliente.component.css" />
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <span class="navbar-brand" href="#">Menu VistaCliente</span>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link" href="login.component.html">Inicio de Sesion</a>
-                        <!--<a class="nav-link" href="#">Features</a>-->
-                        <!--<a class="nav-link" href="#">Pricing</a>-->
-                    </div>
-                </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Menu Vista Cliente</title>
+
+    <!-- Custom styles for this template -->
+    <link href="menucliente.component.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand mx-3">Cliente</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/login">Inicio</a>
+          </li>
+          <!--<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
-        </nav>
+          </li>-->
+          <li class="nav-item active ml-auto">
+            <a class="nav-link" href="/">Opciones</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
         <div class="container my-3">
-            <div class="row">
-                <div class="col-sm-4 col-md-4 col-lg-3 col-xl-4 py-4 bg-white">
-                    <h2>Gestion de Clientes</h2>
-                    <form>
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Lenguaje</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Lenguaje" autofocus />
-                        </div>
-                        <div class="mb-3">
-                            <label for="descripcion" class="form-label">Descripción</label>
-                            <textarea class="form-control" id="descripcion" placeholder="Descripción del lenguaje" rows="3"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="programadores" class="form-label">Número de Programadores</label>
-                            <input type="number" class="form-control" id="programadores" />
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-success">Guardar</button>
-                            <button class="btn btn-secondary">Limpiar</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-4 py-4 bg-white">
-                    <h2>Registro De Citas</h2>
-                    <table class="table table-dark table-striped">
-                        <thead>
-                            <tr>
-                                <th class="centrado">#</th>
-                                <th class="centrado">Lenguaje</th>
-                                <th class="centrado">Cantidad de programadores</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="centrado">1</td>
-                                <td class="centrado">JavaScript</td>
-                                <td class="centrado">21</td>
-                            </tr>
-                            <tr>
-                                <td class="centrado">2</td>
-                                <td class="centrado">Python</td>
-                                <td class="centrado">110</td>
-                            </tr>
-                            <tr>
-                                <td class="centrado">3</td>
-                                <td class="centrado">C#</td>
-                                <td class="centrado">45</td>
-                            </tr>
-                            <tr>
-                                <td class="centrado">4</td>
-                                <td class="centrado">Ruby</td>
-                                <td class="centrado">31</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-4 py-4 bg-white">
-                  <h2>Consulta de mis Puntos</h2>
-                  <table class="table table-dark table-striped">
-                      <thead>
-                          <tr>
-                              <th class="centrado">#</th>
-                              <th class="centrado">Lenguaje</th>
-                              <th class="centrado">Cantidad de programadores</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td class="centrado">1</td>
-                              <td class="centrado">JavaScript</td>
-                              <td class="centrado">21</td>
-                          </tr>
-                          <tr>
-                              <td class="centrado">2</td>
-                              <td class="centrado">Python</td>
-                              <td class="centrado">110</td>
-                          </tr>
-                          <tr>
-                              <td class="centrado">3</td>
-                              <td class="centrado">C#</td>
-                              <td class="centrado">45</td>
-                          </tr>
-                          <tr>
-                              <td class="centrado">4</td>
-                              <td class="centrado">Ruby</td>
-                              <td class="centrado">31</td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-            </div>
+          <h1 class="display-3">Menu Vista Cliente</h1>
+          <p>Menu DetailTEC, seleccionar alguna de las opciones para interactuar con el menu y lo va a redirigir a su destino! </p>
         </div>
-        <!-- Bootstrap -->
-    </body>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4 py-5">
+            <h2>Gestion De Clientes</h2>
+            <p>Para hacer alguna gestion de clientes en DetailTEC, por favor presionar el siguiente boton! </p>
+            <p><a class="btn btn-secondary" href="#" role="button">Gestionar &raquo;</a></p>
+          </div>
+          <div class="col-md-4 py-5">
+            <h2>Registro De Citas</h2>
+            <p>Si quiere registrar alguna cita para un servicio de DetailTEC por favor presionar el siguiente boton! </p>
+            <p><a class="btn btn-secondary" href="#" role="button">Registrar &raquo;</a></p>
+          </div>
+          <div class="col-md-4 py-5">
+            <h2>Consultar Mis Puntos</h2>
+            <p>Aqui podras consultar sus puntos mediante el siguiente boton, porfavor presionar si quiere consultar!</p>
+            <p><a class="btn btn-secondary" href="#" role="button">Consultar &raquo;</a></p>
+          </div>
+        </div>
+        <hr>
+      </div> <!-- /container -->
+    </main>
+    <footer class="container cont">
+      <p>&copy; DetailTEC Vista Cliente</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
+

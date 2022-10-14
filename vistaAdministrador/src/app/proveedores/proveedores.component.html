@@ -1,1 +1,102 @@
-<p>proveedores works!</p>
+<nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <h1 style="color: aliceblue;">Gestión de Proveedores</h1>
+      <div class="d-flex">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Añadir proveedor</button>
+  
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <div>
+                  <br>
+                  <table class="table mt-2">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="group-item-action">#</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellidos</th>
+                          <th scope="col">Cédula Jurídica</th>
+                          <th scope="col">Dirección</th>
+                          <th scope="col">Correo electrónico</th>
+                          <th scope="col">Contacto</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let proveedores of proveedor; let i=index">
+                          <th scope="row">{{i+1}}</th>
+                          <td>{{proveedores.nombre}}</td>
+                          <td>{{proveedores.apellidos}}</td>
+                          <td>{{proveedores.cedulaJuridica}}</td>
+                          <td>{{proveedores.direccion}}</td>
+                          <td>{{proveedores.correo}}</td>
+                          <td>{{proveedores.contacto}}</td>
+                          <td>
+                            <button class="btn btn-info">Editar</button>
+                            <button class="btn btn-danger mx-3">Eliminar</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                  </table>
+  
+                    <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                         <h1 class="modal-title fs-5" id="exampleModalLabel">Datos del proveedor</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="row">
+                              <div class="col">
+                                  <div>
+                                      <br><br>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Nombre</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroNombre">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Apellidos</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroApellido">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Cédula Jurídica</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroCedulaJuridica">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Dirección</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroDireccion">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Correo</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroCorreo">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Contacto</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroContacto">
+                                      </div>
+                                  </div>
+                                  <div class="col">
+                      
+                                      <button type="submit" class="btn btn-primary" (click)="agregarProveedor()" style="margin-top: 20;">Insertar</button>
+                      
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                     </div>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>

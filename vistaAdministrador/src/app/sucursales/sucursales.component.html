@@ -1,1 +1,114 @@
-<p>sucursales works!</p>
+<nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <h1 style="color: aliceblue;">Gestión de Sucursales</h1>
+      <div class="d-flex">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Añadir sucursal</button>
+  
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <div>
+                  <br>
+                  <table class="table mt-2">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="group-item-action">#</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Provincia</th>
+                          <th scope="col">Cantón</th>
+                          <th scope="col">Distrito</th>
+                          <th scope="col">Teléfono</th>
+                          <th scope="col">Fecha de Apertura</th>
+                          <th scope="col">Gerente</th>
+                          <th scope="col">Fecha de inicio de Gerencia</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let sucursales of sucursal; let i=index">
+                          <th scope="row">{{i+1}}</th>
+                          <td>{{sucursales.nombre}}</td>
+                          <td>{{sucursales.provincia}}</td>
+                          <td>{{sucursales.canton}}</td>
+                          <td>{{sucursales.distrito}}</td>
+                          <td>{{sucursales.telefono}}</td>
+                          <td>{{sucursales.fechaApertura}}</td>
+                          <td>{{sucursales.gerente}}</td>
+                          <td>{{sucursales.fechaInicioGerencia}}</td>
+                          <td>
+                            <button class="btn btn-info">Editar</button>
+                            <button class="btn btn-danger mx-3">Eliminar</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                  </table>
+  
+                    <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                         <h1 class="modal-title fs-5" id="exampleModalLabel">Datos de la sucursal</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="row">
+                              <div class="col">
+                                  <div>
+                                      <br><br>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Nombre</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroNombre">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Provincia</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroProvincia">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Cantón</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroCanton">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Distrito</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroDistrito">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Teléfono</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroTelefono">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Fecha de Apertura</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroFechaApertura">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1">Gerente</span>
+                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroGerente">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1">Fecha de inicio de Gerencia</span>
+                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroFechaInicioGerencia">
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                      
+                                      <button type="submit" class="btn btn-primary" (click)="agregarSucursal()" style="margin-top: 20;">Insertar</button>
+                      
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                     </div>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>

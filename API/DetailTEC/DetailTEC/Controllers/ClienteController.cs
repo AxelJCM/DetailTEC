@@ -22,49 +22,64 @@ namespace DetailTEC.Controllers
                     LastName = "Naranjo",
                     password = "naranja"}
             };
+
+        public DataContext Context { get; }
+
+        public ClienteController(DataContext context)
+        {
+            Context = context;
+        }
+
         [HttpGet]
         public async Task<ActionResult<List<Cliente>>> Get()
         {
-            return Ok(clientes);
+            return Ok(await Context.Clientes.ToListAsync());
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<Cliente>> Get(int id)
         {
-            var cliente = clientes.Find(h => h.Id == id);
-            if (cliente == null)
+            var dbCliente = await Context.Clientes.FindAsync(id);
+            if (dbCliente == null)
                 return BadRequest("Cliente no encontrado");
-            return Ok(cliente);
+            return Ok(dbCliente);
         }
         [HttpPost]
         public async Task<ActionResult<List<Cliente>>> AddCliente(Cliente cliente)
         {
-            clientes.Add(cliente);
-            return Ok(clientes);
+            Context.Clientes.Add(cliente);
+            await Context.SaveChangesAsync();
+
+            return Ok(await Context.Clientes.ToListAsync());
         }
         [HttpPut]
         public async Task<ActionResult<List<Cliente>>> UpdateCliente(Cliente request)
         {
-            var cliente = clientes.Find(h => h.Id == request.Id);
-            if (cliente == null)
+            var dbCliente = await Context.Clientes.FindAsync(request.Id);
+            if (dbCliente == null)
                 return BadRequest("Cliente no encontrado");
 
-            cliente.FirstName = request.FirstName;
-            cliente.LastName = request.LastName;
-            cliente.email = request.email;
-            cliente.password = request.password;
-            return Ok(clientes);
+            dbCliente.FirstName = request.FirstName;
+            dbCliente.LastName = request.LastName;
+            dbCliente.email = request.email;
+            dbCliente.password = request.password;
+
+            await Context.SaveChangesAsync();
+
+            return Ok(await Context.Clientes.ToListAsync());
         }
 
         [HttpDelete("{id}")]
 
         public async Task<ActionResult<Cliente>> Delete(int id)
         {
-            var cliente = clientes.Find(h => h.Id == id);
-            if (cliente == null)
+            var dbCliente = await Context.Clientes.FindAsync(id);
+            if (dbCliente == null)
                 return BadRequest("Cliente no encontrado");
 
-            clientes.Remove(cliente);
-            return Ok(clientes);
+            Context.Clientes.Remove(dbCliente);
+            await Context.SaveChangesAsync();
+
+            return Ok(await Context.Clientes.ToListAsync());
         }
     }
 }

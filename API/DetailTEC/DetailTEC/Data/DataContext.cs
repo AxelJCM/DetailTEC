@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using DetailTEC;
 
 namespace DetailTEC.Data
 {
@@ -7,5 +8,7 @@ namespace DetailTEC.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         public DbSet<Cliente> Clientes { get; set; }
+
+        public DbSet<DetailTEC.Cita> Cita { get; set; }
     }
 }

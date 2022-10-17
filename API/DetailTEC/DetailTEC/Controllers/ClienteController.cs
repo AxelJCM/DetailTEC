@@ -8,20 +8,7 @@ namespace DetailTEC.Controllers
     public class ClienteController : ControllerBase
     {
         private static List<Cliente> clientes = new List<Cliente>
-            {
-                 new Cliente {
-                    Id = 1,
-                    email = "axel@gmail.com",
-                    FirstName = "Axel",
-                    LastName = "Cordero",
-                    password = "1234"},
-                 new Cliente {
-                    Id = 2,
-                    email = "pablo@gmail.com",
-                    FirstName = "Pablo",
-                    LastName = "Naranjo",
-                    password = "naranja"}
-            };
+        { };
 
         public DataContext Context { get; }
 

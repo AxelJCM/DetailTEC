@@ -1,121 +1,133 @@
-<nav class="navbar navbar-light bg-dark">
-  <div class="container-fluid">
-    <h1 style="color: aliceblue;">Gestión de Trabajadores</h1>
-    <div class="d-flex">
-      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Añadir trabajador</button>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="trabajadores.component.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <h1 style="color: aliceblue;">Gestión de Trabajadores</h1>
+      <div class="d-flex">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Añadir trabajador</button>
+  
+      </div>
     </div>
-  </div>
-</nav>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <div>
-                <br>
-                <table class="table mt-2">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="group-item-action">#</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellidos</th>
-                        <th scope="col">Cedula</th>
-                        <th scope="col">Fecha de ingreso</th>
-                        <th scope="col">Fecha de nacimiento</th>
-                        <th scope="col">Edad</th>
-                        <th scope="col">Password</th>
-                        <th scope="col">Rol</th>
-                        <th scope="col">Tipo de pago</th>
-                        <th scope="col">Acción</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let trabajadores of trabajador; let i=index">
-                        <th scope="row">{{i+1}}</th>
-                        <td>{{trabajadores.nombre}}</td>
-                        <td>{{trabajadores.apellidos}}</td>
-                        <td>{{trabajadores.cedula}}</td>
-                        <td>{{trabajadores.fechaIngreso}}</td>
-                        <td>{{trabajadores.fechaNacimiento}}</td>
-                        <td>{{trabajadores.edad}}</td>
-                        <td>{{trabajadores.password}}</td>
-                        <td>{{trabajadores.rol}}</td>
-                        <td>{{trabajadores.tipoPago}}</td>
-                        <td>
-                          <button class="btn btn-info">Editar</button>
-                          <button class="btn btn-danger mx-3">Eliminar</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                </table>
-
-                  <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                       <h1 class="modal-title fs-5" id="exampleModalLabel">Datos del trabajador</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                    <div class="modal-body">
-                      <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div>
-                                    <br><br>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Nombre</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroNombre">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Apellidos</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroApellido">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Cédula</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroCedula">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Fecha de ingreso</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroFechaIngreso">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Fecha de nacimiento</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroFechaNacimiento">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Edad</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroEdad">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Password</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroPassword">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Rol</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroRol">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Tipo de pago</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroTipoPago">
-                                    </div>
-                                </div>
-                                <div class="col">
-                    
-                                    <button type="submit" class="btn btn-primary" (click)="agregarTrabajador()" style="margin-top: 20;">Insertar</button>
-                    
-                                </div>
-                            </div>
+  </nav>
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <div>
+                  <br>
+                  <table class="table mt-2">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="group-item-action">#</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellidos</th>
+                          <th scope="col">Cedula</th>
+                          <th scope="col">Fecha de ingreso</th>
+                          <th scope="col">Fecha de nacimiento</th>
+                          <th scope="col">Edad</th>
+                          <th scope="col">Password</th>
+                          <th scope="col">Rol</th>
+                          <th scope="col">Tipo de pago</th>
+                          <th scope="col">Acción</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let trabajadores of trabajador; let i=index">
+                          <th scope="row">{{i+1}}</th>
+                          <td>{{trabajadores.nombre}}</td>
+                          <td>{{trabajadores.apellidos}}</td>
+                          <td>{{trabajadores.cedula}}</td>
+                          <td>{{trabajadores.fechaIngreso}}</td>
+                          <td>{{trabajadores.fechaNacimiento}}</td>
+                          <td>{{trabajadores.edad}}</td>
+                          <td>{{trabajadores.password}}</td>
+                          <td>{{trabajadores.rol}}</td>
+                          <td>{{trabajadores.tipoPago}}</td>
+                          <td>
+                            <button class="btn btn-info">Editar</button>
+                            <button class="btn btn-danger mx-3">Eliminar</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                  </table>
+  
+                    <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                         <h1 class="modal-title fs-5" id="exampleModalLabel">Datos del trabajador</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                    </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-primary">Guardar</button>
-                   </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="row">
+                              <div class="col">
+                                  <div>
+                                      <br><br>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Nombre</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroNombre">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Apellidos</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroApellido">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Cédula</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroCedula">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Fecha de ingreso</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroFechaIngreso">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Fecha de nacimiento</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroFechaNacimiento">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Edad</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroEdad">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Password</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroPassword">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Rol</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroRol">
+                                      </div>
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1">Tipo de pago</span>
+                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroTipoPago">
+                                      </div>
+                                  </div>
+                                  <div class="col">
+                      
+                                      <button type="submit" class="btn btn-primary" (click)="agregarTrabajador()" style="margin-top: 20;">Insertar</button>
+                      
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                     </div>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
+

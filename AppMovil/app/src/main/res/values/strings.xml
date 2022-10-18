@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DetailTEC</string>
+    <string-array name="servicios">
+        <item></item>
+        <item>Cambio de Aceite</item>
+        <item>Alineado</item>
+        <item>Tramado</item>
+        <item>Revision 5k</item>
+        <item>Revision 10k</item>
+        <item>Revision 20k</item>
+    </string-array>
+
+    <string-array name="sucursales">
+        <item></item>
+        <item>Cartago Centro</item>
+        <item>Oreamuno de Cartago</item>
+        <item>Pinares Curridabat</item>
+        <item>Rio Oro Santa Ana</item>
+        <item>Ciudad Panama</item>
+
+    </string-array>
+</resources>

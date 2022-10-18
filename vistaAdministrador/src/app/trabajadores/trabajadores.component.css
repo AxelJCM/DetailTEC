@@ -4,10 +4,22 @@ html{
 
 body{
     min-height: 100vh;
+    background-image: url("Imagenes/img4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
    /*  background: #43cea2;
     background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
     background: linear-gradient(to right, #185a9d, #43cea2);  */
 }
 
+th{
+    color: aliceblue;
+}
+
+td{
+    color: aliceblue;
+}
 
 

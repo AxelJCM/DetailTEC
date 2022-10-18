@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -13,8 +14,8 @@ import { InsumoComponent } from './insumo/insumo.component';
 import { MenuComponent } from './menu/menu.component';
 
 const appRoutes:Routes=[
-  {path: '', component:PrincipalComponent},
-  {path: 'login', component:LoginComponent},
+  /* {path: '', component:PrincipalComponent}, */
+  {path: '', component:LoginComponent},
   {path: 'trabajadores', component:TrabajadoresComponent},
   {path: 'sucursales', component:SucursalesComponent},
   {path: 'proveedores', component:ProveedoresComponent},
@@ -37,6 +38,8 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],

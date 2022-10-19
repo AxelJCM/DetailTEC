@@ -11,6 +11,8 @@ import { TrabajadoresComponent } from './trabajadores/trabajadores.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { InsumoComponent } from './insumo/insumo.component';
+import { LavadoComponent } from './lavado/lavado.component';
+import { RegistroComponent } from './registro/registro.component';
 import { MenuComponent } from './menu/menu.component';
 
 const appRoutes:Routes=[
@@ -19,8 +21,8 @@ const appRoutes:Routes=[
   {path: 'trabajadores', component:TrabajadoresComponent},
   {path: 'sucursales', component:SucursalesComponent},
   {path: 'proveedores', component:ProveedoresComponent},
-  {path: 'insumo', component:InsumoComponent},
-  {path: 'menuAdmin', component:MenuComponent}
+  {path: 'insumo', component:InsumoComponent}
+  
 ]
 
 @NgModule({
@@ -32,7 +34,6 @@ const appRoutes:Routes=[
     SucursalesComponent,
     ProveedoresComponent,
     InsumoComponent,
-    MenuComponent,
 
   ],
   imports: [

@@ -21,8 +21,10 @@ const appRoutes:Routes=[
   {path: 'trabajadores', component:TrabajadoresComponent},
   {path: 'sucursales', component:SucursalesComponent},
   {path: 'proveedores', component:ProveedoresComponent},
-  {path: 'insumo', component:InsumoComponent}
-  
+  {path: 'insumo', component:InsumoComponent},
+  {path: 'lavado', component:LavadoComponent},
+  {path: 'registro', component:RegistroComponent}
+
 ]
 
 @NgModule({
@@ -34,6 +36,8 @@ const appRoutes:Routes=[
     SucursalesComponent,
     ProveedoresComponent,
     InsumoComponent,
+    LavadoComponent,
+    RegistroComponent
 
   ],
   imports: [

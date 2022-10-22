@@ -26,8 +26,8 @@ CREATE TABLE Trabajador
 	TApellidos VARCHAR(50),
 	TCedula INT  NOT NULL,
 	TEdad INT,
-	TFechaIngreso DateTime,
-	TFechaNac DateTime,
+	TFechaIngreso Date,
+	TFechaNac Date,
 	TPassword VARCHAR(30),
 	TPago VARCHAR(20),
 	TRol VARCHAR(20),
@@ -48,8 +48,8 @@ CREATE TABLE Sucursal
 	SNombre VARCHAR(20) NOT NULL,
 	STelefono INT,
 	SGerente VARCHAR(30),
-	SFechaIn DateTime,
-	SFechaAp DateTime,
+	SFechaIn Date,
+	SFechaAp Date,
 	SProvincia VARCHAR(20),
 	SCanton VARCHAR(20),
 	SDistrito VARCHAR(20)
@@ -94,7 +94,7 @@ CREATE TABLE Sucursal_Trabajador
 (
 	STCedula INT,
 	STSNombre VARCHAR(20),
-	FechaInicio DateTime
+	FechaInicio Date
 );
 
 CREATE TABLE Trabajador_Cita

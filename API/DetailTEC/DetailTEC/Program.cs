@@ -1,6 +1,7 @@
 global using Microsoft.EntityFrameworkCore;
-global using DetailTEC.Models;
-using Microsoft.EntityFrameworkCore;var builder = WebApplication.CreateBuilder(args);
+using DetailTEC.Models;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 

@@ -71,7 +71,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Citum>(entity =>
             {
                 entity.HasKey(e => e.Cplaca)
-                    .HasName("PK__Cita__00FC8BF1B3AA35CF");
+                    .HasName("PK__Cita__00FC8BF162D653CE");
 
                 entity.Property(e => e.Cplaca)
                     .HasMaxLength(15)
@@ -104,7 +104,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Cliente>(entity =>
             {
                 entity.HasKey(e => e.Ccedula)
-                    .HasName("PK__Cliente__02E5F6F48D97F9C2");
+                    .HasName("PK__Cliente__02E5F6F42021D3DF");
 
                 entity.ToTable("Cliente");
 
@@ -151,7 +151,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Direccion>(entity =>
             {
                 entity.HasKey(e => new { e.Dprovincia, e.Dcanton, e.Ddistrito })
-                    .HasName("PK__Direccio__38F2EE3E1641D06A");
+                    .HasName("PK__Direccio__38F2EE3E8DF73824");
 
                 entity.ToTable("Direccion");
 
@@ -181,7 +181,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Lavado>(entity =>
             {
                 entity.HasKey(e => e.LtipoLavado)
-                    .HasName("PK__Lavado__9B4C8C9CA343877E");
+                    .HasName("PK__Lavado__9B4C8C9CC90CF823");
 
                 entity.ToTable("Lavado");
 
@@ -222,7 +222,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Producto>(entity =>
             {
                 entity.HasKey(e => new { e.Pmarca, e.Pplaca, e.Pnombre })
-                    .HasName("PK__Producto__6D4A1562DD620B6F");
+                    .HasName("PK__Producto__6D4A1562C0C67410");
 
                 entity.ToTable("Producto");
 
@@ -266,7 +266,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Proveedor>(entity =>
             {
                 entity.HasKey(e => e.PcedulaJuridica)
-                    .HasName("PK__Proveedo__AD8F4338E7874969");
+                    .HasName("PK__Proveedo__AD8F433831CDF7F2");
 
                 entity.ToTable("Proveedor");
 
@@ -371,7 +371,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Sucursal>(entity =>
             {
                 entity.HasKey(e => e.Snombre)
-                    .HasName("PK__Sucursal__7D947843605B3A67");
+                    .HasName("PK__Sucursal__7D9478432FBF3A40");
 
                 entity.ToTable("Sucursal");
 
@@ -391,11 +391,11 @@ namespace DetailTEC.Models
                     .HasColumnName("SDistrito");
 
                 entity.Property(e => e.SfechaAp)
-                    .HasColumnType("datetime")
+                    .HasColumnType("date")
                     .HasColumnName("SFechaAp");
 
                 entity.Property(e => e.SfechaIn)
-                    .HasColumnType("datetime")
+                    .HasColumnType("date")
                     .HasColumnName("SFechaIn");
 
                 entity.Property(e => e.Sgerente)
@@ -417,7 +417,7 @@ namespace DetailTEC.Models
 
                 entity.ToTable("Sucursal_Trabajador");
 
-                entity.Property(e => e.FechaInicio).HasColumnType("datetime");
+                entity.Property(e => e.FechaInicio).HasColumnType("date");
 
                 entity.Property(e => e.Stcedula).HasColumnName("STCedula");
 
@@ -440,7 +440,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Telefono>(entity =>
             {
                 entity.HasKey(e => e.Telefono1)
-                    .HasName("PK__Telefono__4EC50481EE13D42D");
+                    .HasName("PK__Telefono__4EC50481B06DF7FE");
 
                 entity.ToTable("Telefono");
 
@@ -459,7 +459,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Trabajador>(entity =>
             {
                 entity.HasKey(e => e.Tcedula)
-                    .HasName("PK__Trabajad__FC58143733C4485F");
+                    .HasName("PK__Trabajad__FC58143777DADD73");
 
                 entity.ToTable("Trabajador");
 
@@ -475,11 +475,11 @@ namespace DetailTEC.Models
                 entity.Property(e => e.Tedad).HasColumnName("TEdad");
 
                 entity.Property(e => e.TfechaIngreso)
-                    .HasColumnType("datetime")
+                    .HasColumnType("date")
                     .HasColumnName("TFechaIngreso");
 
                 entity.Property(e => e.TfechaNac)
-                    .HasColumnType("datetime")
+                    .HasColumnType("date")
                     .HasColumnName("TFechaNac");
 
                 entity.Property(e => e.Tnombre)

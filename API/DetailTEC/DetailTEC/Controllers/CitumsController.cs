@@ -11,23 +11,23 @@ namespace DetailTEC.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CitaController : ControllerBase
+    public class CitumsController : ControllerBase
     {
         private readonly DetailTECdbContext _context;
 
-        public CitaController(DetailTECdbContext context)
+        public CitumsController(DetailTECdbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Cita
+        // GET: api/Citums
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Citum>>> GetCita()
         {
             return await _context.Cita.ToListAsync();
         }
 
-        // GET: api/Cita/5
+        // GET: api/Citums/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Citum>> GetCitum(string id)
         {
@@ -41,7 +41,7 @@ namespace DetailTEC.Controllers
             return citum;
         }
 
-        // PUT: api/Cita/5
+        // PUT: api/Citums/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCitum(string id, Citum citum)
@@ -72,7 +72,7 @@ namespace DetailTEC.Controllers
             return NoContent();
         }
 
-        // POST: api/Cita
+        // POST: api/Citums
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Citum>> PostCitum(Citum citum)
@@ -97,7 +97,7 @@ namespace DetailTEC.Controllers
             return CreatedAtAction("GetCitum", new { id = citum.Cplaca }, citum);
         }
 
-        // DELETE: api/Cita/5
+        // DELETE: api/Citums/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCitum(string id)
         {

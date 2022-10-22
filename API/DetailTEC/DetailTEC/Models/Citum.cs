@@ -13,7 +13,7 @@ namespace DetailTEC.Models
 
         public string? CtipoLavado { get; set; }
         public string? Ccliente { get; set; }
-        
+
         [Key]
         public string Cplaca { get; set; } = null!;
 

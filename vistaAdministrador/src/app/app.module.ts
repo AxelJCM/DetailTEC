@@ -14,6 +14,7 @@ import { InsumoComponent } from './insumo/insumo.component';
 import { LavadoComponent } from './lavado/lavado.component';
 import { RegistroComponent } from './registro/registro.component';
 import { MenuComponent } from './menu/menu.component';
+import { EditarTrabajadorComponent } from './editar-trabajador/editar-trabajador.component';
 
 const appRoutes:Routes=[
   /* {path: '', component:PrincipalComponent}, */
@@ -37,7 +38,10 @@ const appRoutes:Routes=[
     ProveedoresComponent,
     InsumoComponent,
     LavadoComponent,
-    RegistroComponent
+    RegistroComponent,
+    MenuComponent,
+    EditarTrabajadorComponent,
+
 
   ],
   imports: [

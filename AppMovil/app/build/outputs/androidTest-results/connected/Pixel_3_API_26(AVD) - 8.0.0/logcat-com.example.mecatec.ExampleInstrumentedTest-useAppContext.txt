@@ -1,0 +1,2 @@
+10-19 19:36:21.271 22751 22775 I TestRunner: started: useAppContext(com.example.mecatec.ExampleInstrumentedTest)
+10-19 19:36:21.273 22751 22775 I TestRunner: finished: useAppContext(com.example.mecatec.ExampleInstrumentedTest)

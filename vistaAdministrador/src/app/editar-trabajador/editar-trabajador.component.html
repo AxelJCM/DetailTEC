@@ -1,4 +1,4 @@
-<div *ngIf="trabajador" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -9,7 +9,7 @@
         <div class="container">
           <div class="row">
               <div class="col">
-                  <div >
+                  <div *ngIf="trabajador">
                       <br><br>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Nombre</span>
@@ -25,7 +25,7 @@
                       </div>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Fecha de ingreso</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.fechaIngreso">
+                          <input type="date" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.fechaIngreso">
                       </div>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Fecha de nacimiento</span>

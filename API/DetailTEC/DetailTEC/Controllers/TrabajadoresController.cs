@@ -43,14 +43,9 @@ namespace DetailTEC.Controllers
 
         // PUT: api/Trabajadores/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutTrabajador(int id, Trabajador trabajador)
+        [HttpPut]
+        public async Task<IActionResult> PutTrabajador(Trabajador trabajador)
         {
-            if (id != trabajador.Tcedula)
-            {
-                return BadRequest();
-            }
-
             _context.Entry(trabajador).State = EntityState.Modified;
 
             try
@@ -59,7 +54,7 @@ namespace DetailTEC.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TrabajadorExists(id))
+                if (!TrabajadorExists(trabajador.Tcedula))
                 {
                     return NotFound();
                 }

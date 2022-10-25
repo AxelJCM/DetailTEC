@@ -12,7 +12,7 @@
       <h1 style="color: aliceblue;">Gestión de Trabajadores</h1>
       <div class="d-flex">
         <button type="button" (click)="crearTrabajador()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Gestionar</button>
-  
+
       </div>
     </div>
   </nav>
@@ -34,20 +34,22 @@
                           <th scope="col">Password</th>
                           <th scope="col">Rol</th>
                           <th scope="col">Tipo de pago</th>
+                          <th scope="col">Nombre de Sucursal</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr *ngFor="let trabajadores of trabajador; let i=index">
                           <th scope="row">{{i+1}}</th>
-                          <td>{{trabajadores.nombre}}</td>
-                          <td>{{trabajadores.apellidos}}</td>
-                          <td>{{trabajadores.cedula}}</td>
-                          <td>{{trabajadores.fechaIngreso}}</td>
-                          <td>{{trabajadores.fechaNacimiento}}</td>
-                          <td>{{trabajadores.edad}}</td>
-                          <td>{{trabajadores.password}}</td>
-                          <td>{{trabajadores.rol}}</td>
-                          <td>{{trabajadores.tipoPago}}</td>
+                          <td>{{trabajadores.tnombre}}</td>
+                          <td>{{trabajadores.tapellidos}}</td>
+                          <td>{{trabajadores.tcedula}}</td>
+                          <td>{{trabajadores.tfechaIngreso}}</td>
+                          <td>{{trabajadores.tfechaNac}}</td>
+                          <td>{{trabajadores.tedad}}</td>
+                          <td>{{trabajadores.tpassword}}</td>
+                          <td>{{trabajadores.trol}}</td>
+                          <td>{{trabajadores.tpago}}</td>
+                          <td>{{trabajadores.tsnombre}}</td>
                           <!-- <td>
                             <button (click)="editTrabajador(trabajadores)" class="btn btn-info">Editar</button>
                             <button class="btn btn-danger mx-3">Eliminar</button>
@@ -60,8 +62,8 @@
       </div>
   </div>
 </body>
-<app-editar-trabajador 
-[trabajador]="trabajadorAEditar" 
+<app-editar-trabajador
+[trabajador]="trabajadorAEditar"
 (trabajadoresActualizados)="listaActualizada($event)"
 ></app-editar-trabajador>
 </html>

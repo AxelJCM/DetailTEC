@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Trabajadorr } from '../modelos/trabajadores';
 import { TrabajadoresService } from '../servicios/api/trabajadores.service';
 import { Trabajador } from './trabajador.model';
 
@@ -10,27 +9,27 @@ import { Trabajador } from './trabajador.model';
 })
 export class TrabajadoresComponent implements OnInit {
 
-  @Input() cedula?: Trabajadorr;
-  trabajador: Trabajadorr[]=[];
-  trabajadorAEditar?: Trabajadorr;
+  @Input() tcedula?: Trabajador;
+  trabajador: Trabajador[]=[];
+  trabajadorAEditar?: Trabajador;
 
   constructor(private trabajadorService : TrabajadoresService) { }
 
   ngOnInit(): void {
     this.trabajadorService
     .getTrabajadores()
-    .subscribe((result: Trabajadorr[]) => (this.trabajador = result));
+    .subscribe((result: Trabajador[]) => (this.trabajador = result));
   }
 
-  listaActualizada(trabajador: Trabajadorr[]){
+  listaActualizada(trabajador: Trabajador[]){
     this.trabajador = trabajador;
   }
 
   crearTrabajador(){
-    this.trabajadorAEditar = new Trabajadorr();
+    this.trabajadorAEditar = new Trabajador();
   }
 
-  editTrabajador(trabajadores: Trabajadorr){
+  editTrabajador(trabajadores: Trabajador){
     this.trabajadorAEditar = trabajadores;
   }
 

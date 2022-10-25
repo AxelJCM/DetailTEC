@@ -17,7 +17,7 @@ namespace DetailTEC.Models
         }
 
         public virtual DbSet<CitaLavado> CitaLavados { get; set; } = null!;
-        public virtual DbSet<Citum> Cita { get; set; } = null!;
+        public virtual DbSet<Cita> Cita { get; set; } = null!;
         public virtual DbSet<Cliente> Clientes { get; set; } = null!;
         public virtual DbSet<Direccion> Direccions { get; set; } = null!;
         public virtual DbSet<Lavado> Lavados { get; set; } = null!;
@@ -28,7 +28,7 @@ namespace DetailTEC.Models
         public virtual DbSet<SucursalTrabajador> SucursalTrabajadors { get; set; } = null!;
         public virtual DbSet<Telefono> Telefonos { get; set; } = null!;
         public virtual DbSet<Trabajador> Trabajadors { get; set; } = null!;
-        public virtual DbSet<TrabajadorCitum> TrabajadorCita { get; set; } = null!;
+        public virtual DbSet<TrabajadorCita> TrabajadorCita { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -68,10 +68,10 @@ namespace DetailTEC.Models
                     .HasConstraintName("CL_Lavado_FK");
             });
 
-            modelBuilder.Entity<Citum>(entity =>
+            modelBuilder.Entity<Cita>(entity =>
             {
                 entity.HasKey(e => e.Cplaca)
-                    .HasName("PK__Cita__00FC8BF162D653CE");
+                    .HasName("PK__Cita__00FC8BF110FFA0F4");
 
                 entity.Property(e => e.Cplaca)
                     .HasMaxLength(15)
@@ -104,7 +104,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Cliente>(entity =>
             {
                 entity.HasKey(e => e.Ccedula)
-                    .HasName("PK__Cliente__02E5F6F42021D3DF");
+                    .HasName("PK__Cliente__02E5F6F46DDF9AEE");
 
                 entity.ToTable("Cliente");
 
@@ -151,7 +151,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Direccion>(entity =>
             {
                 entity.HasKey(e => new { e.Dprovincia, e.Dcanton, e.Ddistrito })
-                    .HasName("PK__Direccio__38F2EE3E8DF73824");
+                    .HasName("PK__Direccio__38F2EE3E6D9DDA09");
 
                 entity.ToTable("Direccion");
 
@@ -181,7 +181,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Lavado>(entity =>
             {
                 entity.HasKey(e => e.LtipoLavado)
-                    .HasName("PK__Lavado__9B4C8C9CC90CF823");
+                    .HasName("PK__Lavado__9B4C8C9C0A170395");
 
                 entity.ToTable("Lavado");
 
@@ -222,7 +222,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Producto>(entity =>
             {
                 entity.HasKey(e => new { e.Pmarca, e.Pplaca, e.Pnombre })
-                    .HasName("PK__Producto__6D4A1562C0C67410");
+                    .HasName("PK__Producto__6D4A1562B93A9955");
 
                 entity.ToTable("Producto");
 
@@ -250,12 +250,6 @@ namespace DetailTEC.Models
                     .IsUnicode(false)
                     .HasColumnName("PProveedores");
 
-                entity.HasOne(d => d.PcedulaNavigation)
-                    .WithMany(p => p.Productos)
-                    .HasForeignKey(d => d.Pcedula)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("Cliente_Producto_FK");
-
                 entity.HasOne(d => d.PplacaNavigation)
                     .WithMany(p => p.Productos)
                     .HasForeignKey(d => d.Pplaca)
@@ -266,7 +260,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Proveedor>(entity =>
             {
                 entity.HasKey(e => e.PcedulaJuridica)
-                    .HasName("PK__Proveedo__AD8F433831CDF7F2");
+                    .HasName("PK__Proveedo__AD8F433885C50460");
 
                 entity.ToTable("Proveedor");
 
@@ -345,11 +339,6 @@ namespace DetailTEC.Models
                     .IsUnicode(false)
                     .HasColumnName("PSNombre");
 
-                entity.HasOne(d => d.PpccedulaNavigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.Ppccedula)
-                    .HasConstraintName("PP_Cliente_FK");
-
                 entity.HasOne(d => d.PpcedulaJuridicaNavigation)
                     .WithMany()
                     .HasForeignKey(d => d.PpcedulaJuridica)
@@ -371,7 +360,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Sucursal>(entity =>
             {
                 entity.HasKey(e => e.Snombre)
-                    .HasName("PK__Sucursal__7D9478432FBF3A40");
+                    .HasName("PK__Sucursal__7D947843F24CF12A");
 
                 entity.ToTable("Sucursal");
 
@@ -440,7 +429,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Telefono>(entity =>
             {
                 entity.HasKey(e => e.Telefono1)
-                    .HasName("PK__Telefono__4EC50481B06DF7FE");
+                    .HasName("PK__Telefono__4EC504813DC32288");
 
                 entity.ToTable("Telefono");
 
@@ -459,7 +448,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Trabajador>(entity =>
             {
                 entity.HasKey(e => e.Tcedula)
-                    .HasName("PK__Trabajad__FC58143777DADD73");
+                    .HasName("PK__Trabajad__FC581437D34A016F");
 
                 entity.ToTable("Trabajador");
 
@@ -475,11 +464,13 @@ namespace DetailTEC.Models
                 entity.Property(e => e.Tedad).HasColumnName("TEdad");
 
                 entity.Property(e => e.TfechaIngreso)
-                    .HasColumnType("date")
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
                     .HasColumnName("TFechaIngreso");
 
                 entity.Property(e => e.TfechaNac)
-                    .HasColumnType("date")
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
                     .HasColumnName("TFechaNac");
 
                 entity.Property(e => e.Tnombre)
@@ -506,14 +497,9 @@ namespace DetailTEC.Models
                     .HasMaxLength(20)
                     .IsUnicode(false)
                     .HasColumnName("TSNombre");
-
-                entity.HasOne(d => d.TsnombreNavigation)
-                    .WithMany(p => p.Trabajadors)
-                    .HasForeignKey(d => d.Tsnombre)
-                    .HasConstraintName("Trabajador_Sucursal_FK");
             });
 
-            modelBuilder.Entity<TrabajadorCitum>(entity =>
+            modelBuilder.Entity<TrabajadorCita>(entity =>
             {
                 entity.HasNoKey();
 

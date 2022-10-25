@@ -26,8 +26,8 @@ CREATE TABLE Trabajador
 	TApellidos VARCHAR(50),
 	TCedula INT  NOT NULL,
 	TEdad INT,
-	TFechaIngreso Date,
-	TFechaNac Date,
+	TFechaIngreso VARCHAR(10),
+	TFechaNac VARCHAR(10),
 	TPassword VARCHAR(30),
 	TPago VARCHAR(20),
 	TRol VARCHAR(20),
@@ -60,7 +60,7 @@ CREATE TABLE Lavado
 	LTipoLavado VARCHAR(15) NOT NULL,
 	LCosto INT,
 	LPrecio INT,
-	LDuracion Time,
+	LDuracion INT,
 	LProductos VARCHAR(30),
 	LPersonal VARCHAR(30),
 	LPuntuacion INT,
@@ -151,10 +151,6 @@ ALTER TABLE Direccion
 ALTER TABLE Telefono
 	ADD PRIMARY KEY (Telefono);
 
-ALTER TABLE Producto
-ADD CONSTRAINT Cliente_Producto_FK FOREIGN KEY (PCedula)
-REFERENCES Cliente(CCedula);
-
 ALTER TABLE Proveedor_Producto
 ADD CONSTRAINT PP_Proveedor_FK FOREIGN KEY (PPCedulaJuridica)
 REFERENCES Proveedor(PCedulaJuridica);
@@ -167,17 +163,9 @@ ALTER TABLE Proveedor_Producto
 ADD CONSTRAINT PP_Producto_FK FOREIGN KEY (PPMarca,PPPlaca,PPNombre)
 REFERENCES Producto(PMarca,PPlaca,PNombre);
 
-ALTER TABLE Proveedor_Producto
-ADD CONSTRAINT PP_Cliente_FK FOREIGN KEY (PPCCedula)
-REFERENCES Cliente(CCedula);
-
 ALTER TABLE Producto
 ADD CONSTRAINT Producto_Cita_FK FOREIGN KEY (PPlaca)
 REFERENCES Cita(CPlaca);
-
-ALTER TABLE Trabajador
-ADD CONSTRAINT Trabajador_Sucursal_FK FOREIGN KEY (TSNombre)
-REFERENCES Sucursal(SNombre);
 
 ALTER TABLE Lavado
 ADD CONSTRAINT Lavado_Sucursal_FK FOREIGN KEY (LSNombre)

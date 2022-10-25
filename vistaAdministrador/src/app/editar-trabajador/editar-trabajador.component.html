@@ -13,48 +13,53 @@
                       <br><br>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Nombre</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.nombre">
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tnombre">
                       </div>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Apellidos</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.apellidos">
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tapellidos">
                       </div>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Cédula</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.cedula">
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tcedula">
                       </div>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Fecha de ingreso</span>
-                          <input type="date" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.fechaIngreso">
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tfechaIngreso">
                       </div>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Fecha de nacimiento</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.fechaNacimiento">
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tfechaNac">
                       </div>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Edad</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.edad">
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tedad">
                       </div>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Password</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.password">
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tpassword">
                       </div>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Rol</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.rol">
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.trol">
                       </div>
                       <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">Tipo de pago</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tipoPago">
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tpago">
                       </div>
-                      <button (click)="agregarTrabajador(trabajador)" *ngIf="!trabajador.cedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
-                      <button (click)="borrarTrabajador(trabajador)" *ngIf="trabajador.cedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
-                      <button (click)="actualizarTrabajador(trabajador)" *ngIf="trabajador.cedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Sucursal</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tsnombre">
+                    </div>
+
+                      <button (click)="agregarTrabajador(trabajador)" *ngIf="!trabajador.tcedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
+                      <button (click)="borrarTrabajador(trabajador)" *ngIf="trabajador.tcedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
+                      <button (click)="actualizarTrabajador(trabajador)" *ngIf="trabajador.tcedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
                   </div>
                   <div class="col">
-      
-                      
-      
+
+
+
                   </div>
               </div>
           </div>

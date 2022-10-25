@@ -12,7 +12,6 @@ namespace DetailTEC.Models
         public string? Pproveedores { get; set; }
         public int Pcedula { get; set; }
 
-        public virtual Cliente PcedulaNavigation { get; set; } = null!;
-        public virtual Citum PplacaNavigation { get; set; } = null!;
+        public virtual Cita PplacaNavigation { get; set; } = null!;
     }
 }

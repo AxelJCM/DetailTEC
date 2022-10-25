@@ -8,7 +8,6 @@ namespace DetailTEC.Models
         public Sucursal()
         {
             Lavados = new HashSet<Lavado>();
-            Trabajadors = new HashSet<Trabajador>();
         }
 
         public string Snombre { get; set; } = null!;
@@ -21,6 +20,5 @@ namespace DetailTEC.Models
         public string? Sdistrito { get; set; }
 
         public virtual ICollection<Lavado> Lavados { get; set; }
-        public virtual ICollection<Trabajador> Trabajadors { get; set; }
     }
 }

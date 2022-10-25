@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Trabajadorr } from '../modelos/trabajadores';
 import { TrabajadoresService } from '../servicios/api/trabajadores.service';
+import { Trabajador } from '../trabajadores/trabajador.model';
 
 @Component({
   selector: 'app-editar-trabajador',
@@ -8,32 +8,32 @@ import { TrabajadoresService } from '../servicios/api/trabajadores.service';
   styleUrls: ['./editar-trabajador.component.css']
 })
 export class EditarTrabajadorComponent implements OnInit {
-  @Input() trabajador?: Trabajadorr;
-  @Output() trabajadoresActualizados = new EventEmitter<Trabajadorr[]>();
-   
+  @Input() trabajador?: Trabajador;
+  @Output() trabajadoresActualizados = new EventEmitter<Trabajador[]>();
+
   constructor(private trabajadorService: TrabajadoresService) { }
 
   ngOnInit(): void {
   }
 
-  actualizarTrabajador(trabajador:Trabajadorr){
+  actualizarTrabajador(trabajador:Trabajador){
     this.trabajadorService
     .actualizarTrabajadores(trabajador)
-    .subscribe((trabajadores: Trabajadorr[]) => this.trabajadoresActualizados.emit(trabajadores));
+    .subscribe((trabajadores: Trabajador[]) => this.trabajadoresActualizados.emit(trabajadores));
   }
 
-  borrarTrabajador(trabajador:Trabajadorr){
+  borrarTrabajador(trabajador:Trabajador){
     this.trabajadorService
     .borrarTrabajadores(trabajador)
-    .subscribe((trabajadores: Trabajadorr[]) => this.trabajadoresActualizados.emit(trabajadores));
+    .subscribe((trabajadores: Trabajador[]) => this.trabajadoresActualizados.emit(trabajadores));
   }
 
-  agregarTrabajador(trabajador:Trabajadorr){
+  agregarTrabajador(trabajador:Trabajador){
     this.trabajadorService
     .agregarTrabajadores(trabajador)
-    .subscribe((trabajadores: Trabajadorr[]) => this.trabajadoresActualizados.emit(trabajadores));
+    .subscribe((trabajadores: Trabajador[]) => this.trabajadoresActualizados.emit(trabajadores));
   }
 
-  
+
 
 }

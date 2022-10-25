@@ -1,12 +1,13 @@
-export class Trabajadorr{
+export class Trabajador{
 
-    nombre = "";
-    apellidos = "";
-    cedula?: number;
-    fechaIngreso = "";
-    fechaNacimiento = "";
-    edad?: number
-    password = "";
-    rol = ""; 
-    tipoPago = "";
+    tnombre = "";
+    tapellidos = "";
+    tcedula?: number;
+    tedad?: number;
+    tfechaIngreso = "";
+    tfechaNac = "";
+    tpassword = "";
+    tpago = "";
+    trol = "";
+    tsnombre = "";
 }

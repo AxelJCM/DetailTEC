@@ -8,7 +8,7 @@ namespace DetailTEC.Models
         public string LtipoLavado { get; set; } = null!;
         public int? Lcosto { get; set; }
         public int? Lprecio { get; set; }
-        public TimeSpan? Lduracion { get; set; }
+        public int? Lduracion { get; set; }
         public string? Lproductos { get; set; }
         public string? Lpersonal { get; set; }
         public int? Lpuntuacion { get; set; }

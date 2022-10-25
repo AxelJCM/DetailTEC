@@ -4,6 +4,7 @@ INSERT INTO Cliente (CNombre,CCedula,CCorreo,CUsuario,CPassword,CProvincia,CCant
 
 INSERT INTO Cita (CTipoLavado,CCliente,CPlaca,CCCedula,CSucursal) VALUES ('Rapido','Axel Cordero','1234AXEL','901220972','San Marcos')
 
-INSERT INTO Sucursal (SNombre,STelefono,SGerente,SFechaIn,SFechaAp,SProvincia,SCanton,SDistrito) VALUES ('San Marcos', 64839332, 'Brandon Martinez', 0, 0, 'Cartago','Norte','Oreamuno')
+INSERT INTO Sucursal (SNombre,STelefono,SGerente,SFechaIn,SFechaAp,SProvincia,SCanton,SDistrito) VALUES ('San Marcos', 64839332, 'Brandon Martinez', '12-12-2000', '12-12-2000', 'Cartago','Norte','Oreamuno')
 
+INSERT INTO Trabajador (TNombre,TApellidos,TCedula,TEdad,TFechaIngreso,TFechaNac,TPassword,TPago,TRol,TSNombre) VALUES ('Reiner','Urena Vega',123456789,21,'12-09-2002','10-08-2004','1234Axel','123','Ingeniero','San Marcos')
 

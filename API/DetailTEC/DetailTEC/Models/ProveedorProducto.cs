@@ -18,7 +18,6 @@ namespace DetailTEC.Models
         public string? Ppdistrito { get; set; }
 
         public virtual Producto Pp { get; set; } = null!;
-        public virtual Cliente? PpccedulaNavigation { get; set; }
         public virtual Proveedor? PpcedulaJuridicaNavigation { get; set; }
         public virtual Sucursal PsnombreNavigation { get; set; } = null!;
     }

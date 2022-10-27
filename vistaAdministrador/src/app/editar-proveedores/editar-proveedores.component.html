@@ -1,0 +1,52 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         <h1 class="modal-title fs-5" id="exampleModalLabel">Datos del proveedor</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+              <div class="col">
+                  <div *ngIf="proveedor">
+                      <br><br>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Nombre</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="proveedor.pnombre">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Cédula Jurídica</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="proveedor.pcedulaJuridica">
+                      </div>
+                      <!-- <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Dirección</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="proveedor">
+                      </div> -->
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Correo</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="proveedor.pcorreo">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Contacto</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="proveedor.pcontacto">
+                      </div>
+                      <button (click)="agregarProveedor(proveedor)" *ngIf="proveedor.pcedulaJuridica" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
+                      <button (click)="borrarProveedor(proveedor)" *ngIf="proveedor.pcedulaJuridica" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
+                      <button (click)="actualizarProveedor(proveedor)" *ngIf="proveedor.pcedulaJuridica" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
+                  </div>
+                  <div class="col">
+    
+      
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+    <!--     <button type="button" class="btn btn-primary">Guardar</button> -->
+     </div>
+      </div>
+      </div>
+  </div>

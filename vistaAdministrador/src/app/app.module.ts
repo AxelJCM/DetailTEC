@@ -15,6 +15,11 @@ import { LavadoComponent } from './lavado/lavado.component';
 import { RegistroComponent } from './registro/registro.component';
 import { MenuComponent } from './menu/menu.component';
 import { EditarTrabajadorComponent } from './editar-trabajador/editar-trabajador.component';
+import { EditarClienteComponent } from './editar-cliente/editar-cliente.component';
+import { EditarProveedoresComponent } from './editar-proveedores/editar-proveedores.component';
+import { EditarSucursalComponent } from './editar-sucursal/editar-sucursal.component';
+import { EditarProductosComponent } from './editar-productos/editar-productos.component';
+import { EditarLavadosComponent } from './editar-lavados/editar-lavados.component';
 
 const appRoutes:Routes=[
   /* {path: '', component:PrincipalComponent}, */
@@ -41,6 +46,11 @@ const appRoutes:Routes=[
     RegistroComponent,
     MenuComponent,
     EditarTrabajadorComponent,
+    EditarClienteComponent,
+    EditarProveedoresComponent,
+    EditarSucursalComponent,
+    EditarProductosComponent,
+    EditarLavadosComponent,
 
 
   ],

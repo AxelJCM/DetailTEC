@@ -52,12 +52,11 @@
                         <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tsnombre">
                     </div>
 
-                      <button (click)="agregarTrabajador(trabajador)" *ngIf="!trabajador.tcedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
+                      <button (click)="agregarTrabajador(trabajador)" *ngIf="trabajador.tcedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
                       <button (click)="borrarTrabajador(trabajador)" *ngIf="trabajador.tcedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
                       <button (click)="actualizarTrabajador(trabajador)" *ngIf="trabajador.tcedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
                   </div>
                   <div class="col">
-
 
 
                   </div>

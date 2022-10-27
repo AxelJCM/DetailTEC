@@ -33,5 +33,4 @@ export class TrabajadoresComponent implements OnInit {
     this.trabajadorAEditar = trabajadores;
   }
 
-
 }

@@ -1,9 +1,16 @@
-
-<nav class="navbar navbar-light bg-dark">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-dark">
     <div class="container-fluid">
       <h1 style="color: aliceblue;">Tipos de lavado</h1>
       <div class="d-flex">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Lavado requerido</button>
+        <button type="button" (click)="crearLavado()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Gestionar</button>
   
       </div>
     </div>
@@ -23,97 +30,37 @@
                           <th scope="col">Costo</th>
                           <th scope="col">Precio</th>
                           <th scope="col">Duracion</th>
-                          <th scope="col">Prodcuto</th>
+                          <th scope="col">Producto</th>
                           <th scope="col">Personal</th>
-                          <th scope="col">Puntuacion</th>
+                          <th scope="col">Puntuación</th>
+                          <th scope="col">Sucursal</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr *ngFor="let lavado of lavadoo; let i=index">
+                        <tr *ngFor="let lavado of lavado; let i=index">
                           <th scope="row">{{i+1}}</th>
-                          <td>{{lavado.tipo}}</td>
-                          <td>{{lavado.costo}}</td>
-                          <td>{{lavado.precio}}</td>
-                          <td>{{lavado.duracion}}</td>
-                          <td>{{lavado.producto}}</td>
-                          <td>{{lavado.personal}}</td>
-                          <td>{{lavado.puntuacion}}</td>
+                          <td>{{lavado.ltipoLavado}}</td>
+                          <td>{{lavado.lcosto}}</td>
+                          <td>{{lavado.lprecio}}</td>
+                          <td>{{lavado.lduracion}}</td>
+                          <td>{{lavado.lproductos}}</td>
+                          <td>{{lavado.lpersonal}}</td>
+                          <td>{{lavado.lpuntuacion}}</td>
+                          <td>{{lavado.lsnombre}}</td>
                           <td>
-                            <button class="btn btn-info">Editar</button>
-                            <button class="btn btn-danger mx-3">Eliminar</button>
                           </td>
                         </tr>
                       </tbody>
                   </table>
-  
-                    <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                         <h1 class="modal-title fs-5" id="exampleModalLabel">Datos del trabajador</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                      <div class="modal-body">
-                        <div class="container">
-                          <div class="row">
-                              <div class="col">
-                                  <div>
-                                      <br><br>
-                                      <div class="input-group mb-3">
-                                          <span class="input-group-text" id="basic-addon1">Tipo</span >
-                                        
-                                          <select name="Servicios" id="Servicios" [(ngModel)]="cuadroTipo">
-                                            <option value= "LA"> Lavado y Aspirado</option> 
-                                            <option value= "LE"> Lavado y encerado</option>
-                                            <option value= "LP"> Lavado premium</option>
-                                            <option value= "P"> Pulido</option>
-                                          </select> 
-                                    
-                                      </div>
-                                      <div class="input-group mb-3">
-                                          <span class="input-group-text" id="basic-addon1">Costo</span>
-                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroCosto">
-                                      </div>
-                                      <div class="input-group mb-3">
-                                          <span class="input-group-text" id="basic-addon1">Precio</span>
-                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroPrecio">
-                                      </div>
-                                      <div class="input-group mb-3">
-                                          <span class="input-group-text" id="basic-addon1">Duracion</span>
-                                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroDuracion">
-                                      </div>
-                                      <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Producto</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroProducto">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Personal</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroPersonal">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">Puntuacion</span>
-                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="cuadroPuntuacion">
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                      
-                                      <button type="submit" class="btn btn-primary" (click)="agregarLavado()" style="margin-top: 20;">Insertar</button>
-                      
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Guardar</button>
-                     </div>
-                      </div>
-                      </div>
-                  </div>
               </div>
           </div>
       </div>
   </div>
+</body>
+<app-editar-lavados
+[lavado]="lavadoAEditar"
+(lavadosActualizados)="listaActualizada($event)"
+></app-editar-lavados>
+</html>
+
   

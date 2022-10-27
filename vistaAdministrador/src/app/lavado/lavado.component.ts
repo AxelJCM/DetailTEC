@@ -1,29 +1,33 @@
-import { Component, OnInit } from '@angular/core';
-import { Lavadoo } from './lavadoo.module';
+import { Component, Input, OnInit } from '@angular/core';
+import { LavadosService } from '../servicios/api/lavados.service';
+import { Lavado } from './lavado.module';
 @Component({
   selector: 'app-lavado',
   templateUrl: './lavado.component.html',
   styleUrls: ['./lavado.component.css']
 })
 export class LavadoComponent implements OnInit {
-Lavado:any
-  constructor() { }
+  @Input() ltipoLavado?: Lavado;
+  lavado: Lavado[]=[];
+  lavadoAEditar?: Lavado;
+
+  constructor(private lavadoService : LavadosService) { }
 
   ngOnInit(): void {
+    this.lavadoService
+    .getLavados()
+    .subscribe((result: Lavado[]) => (this.lavado = result));
   }
-  lavadoo: Lavadoo[]=[
 
-  ];
-
-  agregarLavado(){
-    let miLavadoo=new Lavadoo(this.cuadroTipo, this.cuadroCosto, this.cuadroPrecio, this.cuadroDuracion, this.cuadroProducto, this.cuadroPersonal, this.cuadroPuntuacion);
-    this.lavadoo.push(miLavadoo);
+  listaActualizada(lavado: Lavado[]){
+    this.lavado = lavado;
   }
-  cuadroTipo: string="";
-  cuadroCosto: number = 0;
-  cuadroPrecio: number = 0;
-  cuadroDuracion: number = 0;
-  cuadroProducto: string = "";
-  cuadroPersonal: number = 0;
-  cuadroPuntuacion: number = 0;
+
+  crearLavado(){
+    this.lavadoAEditar = new Lavado();
+  }
+
+  editLavado(lavados: Lavado){
+    this.lavadoAEditar = lavados;
+  }
 }

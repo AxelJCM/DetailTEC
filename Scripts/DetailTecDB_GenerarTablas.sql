@@ -16,8 +16,7 @@ CREATE TABLE Producto
 	PMarca VARCHAR(15)  NOT NULL,
 	PPlaca VARCHAR(15)  NOT NULL,
 	PCosto INT,
-	PProveedores VARCHAR(20),
-	PCedula INT NOT NULL
+	PProveedores VARCHAR(20)
 );
 
 CREATE TABLE Trabajador
@@ -64,7 +63,6 @@ CREATE TABLE Lavado
 	LProductos VARCHAR(30),
 	LPersonal VARCHAR(30),
 	LPuntuacion INT,
-	LSNombre VARCHAR(20)
 );
 
 CREATE TABLE Cita
@@ -166,10 +164,6 @@ REFERENCES Producto(PMarca,PPlaca,PNombre);
 ALTER TABLE Producto
 ADD CONSTRAINT Producto_Cita_FK FOREIGN KEY (PPlaca)
 REFERENCES Cita(CPlaca);
-
-ALTER TABLE Lavado
-ADD CONSTRAINT Lavado_Sucursal_FK FOREIGN KEY (LSNombre)
-REFERENCES Sucursal(SNombre);
 
 ALTER TABLE Cita
 ADD CONSTRAINT Cita_Cliente_FK FOREIGN KEY (CCCedula)

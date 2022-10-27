@@ -12,8 +12,5 @@ namespace DetailTEC.Models
         public string? Lproductos { get; set; }
         public string? Lpersonal { get; set; }
         public int? Lpuntuacion { get; set; }
-        public string? Lsnombre { get; set; }
-
-        public virtual Sucursal? LsnombreNavigation { get; set; }
     }
 }

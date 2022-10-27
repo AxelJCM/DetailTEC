@@ -10,7 +10,6 @@ namespace DetailTEC.Models
         public string Pplaca { get; set; } = null!;
         public int? Pcosto { get; set; }
         public string? Pproveedores { get; set; }
-        public int Pcedula { get; set; }
 
         public virtual Cita PplacaNavigation { get; set; } = null!;
     }

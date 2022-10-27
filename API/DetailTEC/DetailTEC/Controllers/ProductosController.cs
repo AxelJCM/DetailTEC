@@ -43,13 +43,9 @@ namespace DetailTEC.Controllers
 
         // PUT: api/Productos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutProducto(string id, Producto producto)
+        [HttpPut]
+        public async Task<IActionResult> PutProducto(Producto producto)
         {
-            if (id != producto.Pmarca)
-            {
-                return BadRequest();
-            }
 
             _context.Entry(producto).State = EntityState.Modified;
 
@@ -59,7 +55,7 @@ namespace DetailTEC.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProductoExists(id))
+                if (!ProductoExists(producto.Pmarca))
                 {
                     return NotFound();
                 }

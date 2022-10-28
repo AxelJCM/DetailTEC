@@ -1,0 +1,89 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col">
+          <div *ngIf="citas">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Cliente</label>
+                <input type="text" class="form-control" id="">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Placa</label>
+                <input type="text" class="form-control" id="">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">Sucursal</label>
+                <input type="text" class="form-control" id="">
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">Tipo de lavado solicitado</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Seleccione</option>
+                  <option>LA</option>
+                  <option>LE</option>
+                  <option>LP</option>
+                  <option>P</option>
+                </select>
+              </div>
+              <button (click)="agregarCitas(citas)" *ngIf="citas.cplaca" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
+              <button (click)="borrarCitas(citas)" *ngIf="citas.cplaca" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
+              <button (click)="actualizarCitas(citas)" *ngIf="citas.cplaca" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
+            </form>
+          </div>
+            
+        </div>
+    </div>
+</div> -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h1 class="modal-title fs-5" id="exampleModalLabel">Datos del trabajador</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+    <div class="modal-body">
+      <div class="container">
+        <div class="row">
+            <div class="col">
+                <div *ngIf="citas">
+                    <br><br>
+                    <div class="col-md-6">
+                      <label class="form-label">Cliente</label>
+                      <input type="text" class="form-control" id="" [(ngModel)]="citas.ccliente">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label">Placa</label>
+                      <input type="text" class="form-control" id="" [(ngModel)]="citas.cplaca">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Sucursal</label>
+                      <input type="text" class="form-control" id="" [(ngModel)]="citas.csucursal">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">Tipo de lavado solicitado</label>
+                      <select id="inputState" class="form-select" [(ngModel)]="citas.ctipoLavado">
+                        <option selected>Seleccione</option>
+                        <option>LA</option>
+                        <option>LE</option>
+                        <option>LP</option>
+                        <option>P</option>
+                      </select>
+                    </div>
+                    <button (click)="agregarCitas(citas)" *ngIf="citas.cplaca" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
+                    <button (click)="borrarCitas(citas)" *ngIf="citas.cplaca" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
+                    <button (click)="actualizarCitas(citas)" *ngIf="citas.cplaca" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
+                </div>
+                <div class="col">
+    
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+   </div>
+    </div>
+    </div>
+</div>

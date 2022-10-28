@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ClientesService } from '../servicios/api/clientes.service';
+import { Cliente } from './registro.model';
 
 @Component({
   selector: 'app-registro',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor() { }
+  @Input() ccedula?: Cliente;
+  cliente: Cliente[]=[];
+  clienteAEditar?: Cliente;
+
+  constructor(private clienteService : ClientesService) { }
 
   ngOnInit(): void {
+    this.clienteService
+    .getClientes()
+    .subscribe((result: Cliente[]) => (this.cliente = result));
   }
 
+  listaActualizada(cliente: Cliente[]){
+    this.cliente = cliente;
+  }
+
+  crearCliente(){
+    this.clienteAEditar = new Cliente();
+  }
+
+  editCliente(clientes: Cliente){
+    this.clienteAEditar = clientes;
+  }
 }

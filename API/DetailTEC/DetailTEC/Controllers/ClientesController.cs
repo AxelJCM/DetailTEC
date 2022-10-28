@@ -43,13 +43,9 @@ namespace DetailTEC.Controllers
 
         // PUT: api/Clientes/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCliente(int id, Cliente cliente)
+        [HttpPut]
+        public async Task<IActionResult> PutCliente(Cliente cliente)
         {
-            if (id != cliente.Ccedula)
-            {
-                return BadRequest();
-            }
 
             _context.Entry(cliente).State = EntityState.Modified;
 
@@ -59,7 +55,7 @@ namespace DetailTEC.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ClienteExists(id))
+                if (!ClienteExists(cliente.Ccedula))
                 {
                     return NotFound();
                 }

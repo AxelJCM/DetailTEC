@@ -4,7 +4,12 @@
     --ligth: #ffffff;
 }
 
+/* html{
+  height: 100%;
+  background-color: #04AA6D;
+}
 body{
+  min-height: 100vh;
   justify-content: center;
   background-color: #04AA6D;
   background-position: center;
@@ -52,10 +57,10 @@ div {
 }
 
   
-  .success {background-color: #04AA6D;} /* Green */
-  .info {background-color: #2196F3;} /* Blue */
-  .warning {background-color: #ff9800;} /* Orange */
-  .danger {background-color: #f44336;} /* Red */
-  .other {background-color: #e7e7e7; color: black;} /* Gray */
+  .success {background-color: #04AA6D;} 
+  .info {background-color: #2196F3;} 
+  .warning {background-color: #ff9800;} 
+  .danger {background-color: #f44336;} 
+  .other {background-color: #e7e7e7; color: black;} 
 .bg-dark {background-color: var(--dark) !important;}
-.bg-dark-x {background-color: var(--dark-x);}
+.bg-dark-x {background-color: var(--dark-x);} */

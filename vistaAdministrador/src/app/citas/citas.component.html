@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-dark">
+        <div class="container-fluid">
+          <h1 style="color: aliceblue;">Registro de citas</h1>
+          <div class="d-flex">
+            <button type="button" (click)="crearCita()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Registrar</button>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <br>
+                    <table class="table mt-2">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="group-item-action">#</th>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">Placa</th>
+                            <th scope="col">Sucursal</th>
+                            <th scope="col">Tipo de lavado seleccionado</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let cita of citas; let i=index">
+                            <th scope="row">{{i+1}}</th>
+                            <td>{{cita.ccliente}}</td>
+                            <td>{{cita.cplaca}}</td>
+                            <td>{{cita.csucursal}}</td>
+                            <td>{{cita.ctipoLavado}}</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<app-editar-citas
+[citas]="citaAEditar"
+(citasActualizados)="listaActualizada($event)"
+></app-editar-citas>
+</html>

@@ -6,5 +6,4 @@ export class Lavado{
    lproductos ="";
    lpersonal?: number;
    lpuntuacion?: number;
-   lsnombre = "";
 }

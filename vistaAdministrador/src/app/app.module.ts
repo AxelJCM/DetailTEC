@@ -20,6 +20,8 @@ import { EditarProveedoresComponent } from './editar-proveedores/editar-proveedo
 import { EditarSucursalComponent } from './editar-sucursal/editar-sucursal.component';
 import { EditarProductosComponent } from './editar-productos/editar-productos.component';
 import { EditarLavadosComponent } from './editar-lavados/editar-lavados.component';
+import { CitasComponent } from './citas/citas.component';
+import { EditarCitasComponent } from './editar-citas/editar-citas.component';
 
 const appRoutes:Routes=[
   /* {path: '', component:PrincipalComponent}, */
@@ -29,7 +31,9 @@ const appRoutes:Routes=[
   {path: 'proveedores', component:ProveedoresComponent},
   {path: 'insumo', component:InsumoComponent},
   {path: 'lavado', component:LavadoComponent},
-  {path: 'registro', component:RegistroComponent}
+  {path: 'registro', component:RegistroComponent},
+  {path: 'menuAdmin', component:MenuComponent},
+  {path: 'citas', component:CitasComponent},
 
 ]
 
@@ -51,6 +55,8 @@ const appRoutes:Routes=[
     EditarSucursalComponent,
     EditarProductosComponent,
     EditarLavadosComponent,
+    CitasComponent,
+    EditarCitasComponent,
 
 
   ],

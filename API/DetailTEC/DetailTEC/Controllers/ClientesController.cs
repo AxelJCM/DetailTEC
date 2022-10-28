@@ -104,12 +104,16 @@ namespace DetailTEC.Controllers
         {
             var result = _context.Clientes.Any(e => e.Ccorreo == auth.Usuario && e.Cpassword == auth.Password);
 
+            var status = new Login { Status = "Ok" };
+
+            var error = new Login { Status = "Error" };
+
             if (!result)
             {
-                return BadRequest();
+                return error;
             }
 
-                return Ok();
+                return Ok(status);
 
         }
 

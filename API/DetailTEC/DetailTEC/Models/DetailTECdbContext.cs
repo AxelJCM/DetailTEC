@@ -18,7 +18,7 @@ namespace DetailTEC.Models
 
         public virtual DbSet<Auth> Auths { get; set; } = null!;
         public virtual DbSet<CitaLavado> CitaLavados { get; set; } = null!;
-        public virtual DbSet<Citum> Cita { get; set; } = null!;
+        public virtual DbSet<Cita> Cita { get; set; } = null!;
         public virtual DbSet<Cliente> Clientes { get; set; } = null!;
         public virtual DbSet<Direccion> Direccions { get; set; } = null!;
         public virtual DbSet<Lavado> Lavados { get; set; } = null!;
@@ -29,7 +29,7 @@ namespace DetailTEC.Models
         public virtual DbSet<SucursalTrabajador> SucursalTrabajadors { get; set; } = null!;
         public virtual DbSet<Telefono> Telefonos { get; set; } = null!;
         public virtual DbSet<Trabajador> Trabajadors { get; set; } = null!;
-        public virtual DbSet<TrabajadorCitum> TrabajadorCita { get; set; } = null!;
+        public virtual DbSet<TrabajadorCita> TrabajadorCita { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -45,7 +45,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Auth>(entity =>
             {
                 entity.HasKey(e => new { e.Usuario, e.Password })
-                    .HasName("PK__Auth__BB5A7547A427106F");
+                    .HasName("PK__Auth__BB5A7547D166DCE7");
 
                 entity.ToTable("Auth");
 
@@ -85,18 +85,10 @@ namespace DetailTEC.Models
                     .HasConstraintName("CL_Lavado_FK");
             });
 
-            modelBuilder.Entity<Citum>(entity =>
+            modelBuilder.Entity<Cita>(entity =>
             {
                 entity.HasKey(e => e.Cplaca)
-<<<<<<< Updated upstream
-                    .HasName("PK__Cita__00FC8BF1FCE27778");
-=======
-<<<<<<< HEAD
-                    .HasName("PK__Cita__00FC8BF1209E2FF5");
-=======
-                    .HasName("PK__Cita__00FC8BF1FCE27778");
->>>>>>> Vista-Administrador
->>>>>>> Stashed changes
+                    .HasName("PK__Cita__00FC8BF1FDD3B808");
 
                 entity.Property(e => e.Cplaca)
                     .HasMaxLength(15)
@@ -129,15 +121,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Cliente>(entity =>
             {
                 entity.HasKey(e => e.Ccedula)
-<<<<<<< Updated upstream
-                    .HasName("PK__Cliente__02E5F6F44EFE8D0F");
-=======
-<<<<<<< HEAD
-                    .HasName("PK__Cliente__02E5F6F4E09D5B49");
-=======
-                    .HasName("PK__Cliente__02E5F6F44EFE8D0F");
->>>>>>> Vista-Administrador
->>>>>>> Stashed changes
+                    .HasName("PK__Cliente__02E5F6F42604751E");
 
                 entity.ToTable("Cliente");
 
@@ -184,15 +168,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Direccion>(entity =>
             {
                 entity.HasKey(e => new { e.Dprovincia, e.Dcanton, e.Ddistrito })
-<<<<<<< Updated upstream
-                    .HasName("PK__Direccio__38F2EE3EAC3569EA");
-=======
-<<<<<<< HEAD
-                    .HasName("PK__Direccio__38F2EE3E6EFA4366");
-=======
-                    .HasName("PK__Direccio__38F2EE3EAC3569EA");
->>>>>>> Vista-Administrador
->>>>>>> Stashed changes
+                    .HasName("PK__Direccio__38F2EE3EDE9A93BF");
 
                 entity.ToTable("Direccion");
 
@@ -222,15 +198,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Lavado>(entity =>
             {
                 entity.HasKey(e => e.LtipoLavado)
-<<<<<<< Updated upstream
-                    .HasName("PK__Lavado__9B4C8C9C03E7EA39");
-=======
-<<<<<<< HEAD
-                    .HasName("PK__Lavado__9B4C8C9CC455B243");
-=======
-                    .HasName("PK__Lavado__9B4C8C9C03E7EA39");
->>>>>>> Vista-Administrador
->>>>>>> Stashed changes
+                    .HasName("PK__Lavado__9B4C8C9CE06164A9");
 
                 entity.ToTable("Lavado");
 
@@ -261,15 +229,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Producto>(entity =>
             {
                 entity.HasKey(e => new { e.Pmarca, e.Pplaca, e.Pnombre })
-<<<<<<< Updated upstream
-                    .HasName("PK__Producto__6D4A1562CE54A66F");
-=======
-<<<<<<< HEAD
-                    .HasName("PK__Producto__6D4A15621A5CA722");
-=======
-                    .HasName("PK__Producto__6D4A1562CE54A66F");
->>>>>>> Vista-Administrador
->>>>>>> Stashed changes
+                    .HasName("PK__Producto__6D4A15626DD90692");
 
                 entity.ToTable("Producto");
 
@@ -305,15 +265,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Proveedor>(entity =>
             {
                 entity.HasKey(e => e.PcedulaJuridica)
-<<<<<<< Updated upstream
-                    .HasName("PK__Proveedo__AD8F4338B0F97A81");
-=======
-<<<<<<< HEAD
-                    .HasName("PK__Proveedo__AD8F4338532DB5B2");
-=======
-                    .HasName("PK__Proveedo__AD8F4338B0F97A81");
->>>>>>> Vista-Administrador
->>>>>>> Stashed changes
+                    .HasName("PK__Proveedo__AD8F4338695EC86F");
 
                 entity.ToTable("Proveedor");
 
@@ -413,15 +365,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Sucursal>(entity =>
             {
                 entity.HasKey(e => e.Snombre)
-<<<<<<< Updated upstream
-                    .HasName("PK__Sucursal__7D9478434EB01587");
-=======
-<<<<<<< HEAD
-                    .HasName("PK__Sucursal__7D94784365CEC9BF");
-=======
-                    .HasName("PK__Sucursal__7D9478434EB01587");
->>>>>>> Vista-Administrador
->>>>>>> Stashed changes
+                    .HasName("PK__Sucursal__7D947843C5FBA624");
 
                 entity.ToTable("Sucursal");
 
@@ -490,15 +434,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Telefono>(entity =>
             {
                 entity.HasKey(e => e.Telefono1)
-<<<<<<< Updated upstream
-                    .HasName("PK__Telefono__4EC5048103CDB475");
-=======
-<<<<<<< HEAD
-                    .HasName("PK__Telefono__4EC504817690129A");
-=======
-                    .HasName("PK__Telefono__4EC5048103CDB475");
->>>>>>> Vista-Administrador
->>>>>>> Stashed changes
+                    .HasName("PK__Telefono__4EC50481758270F6");
 
                 entity.ToTable("Telefono");
 
@@ -517,15 +453,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Trabajador>(entity =>
             {
                 entity.HasKey(e => e.Tcedula)
-<<<<<<< Updated upstream
-                    .HasName("PK__Trabajad__FC5814371B4C69EA");
-=======
-<<<<<<< HEAD
-                    .HasName("PK__Trabajad__FC581437BACC856D");
-=======
-                    .HasName("PK__Trabajad__FC5814371B4C69EA");
->>>>>>> Vista-Administrador
->>>>>>> Stashed changes
+                    .HasName("PK__Trabajad__FC581437472DECE9");
 
                 entity.ToTable("Trabajador");
 
@@ -576,7 +504,7 @@ namespace DetailTEC.Models
                     .HasColumnName("TSNombre");
             });
 
-            modelBuilder.Entity<TrabajadorCitum>(entity =>
+            modelBuilder.Entity<TrabajadorCita>(entity =>
             {
                 entity.HasNoKey();
 

@@ -7,7 +7,7 @@ namespace DetailTEC.Models
     {
         public Cliente()
         {
-            Cita = new HashSet<Citum>();
+            Cita = new HashSet<Cita>();
             Telefonos = new HashSet<Telefono>();
         }
 
@@ -20,7 +20,7 @@ namespace DetailTEC.Models
         public string? Ccanton { get; set; }
         public string? Cdistrito { get; set; }
 
-        public virtual ICollection<Citum> Cita { get; set; }
+        public virtual ICollection<Cita> Cita { get; set; }
         public virtual ICollection<Telefono> Telefonos { get; set; }
     }
 }

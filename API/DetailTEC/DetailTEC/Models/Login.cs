@@ -2,6 +2,6 @@
 {
     public class Login
     {
-        public bool Result { get; set; }
+        public string Status { get; set; }
     }
 }

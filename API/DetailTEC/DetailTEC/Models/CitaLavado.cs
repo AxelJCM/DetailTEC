@@ -8,7 +8,7 @@ namespace DetailTEC.Models
         public string? CltipoLavado { get; set; }
         public string? Clplaca { get; set; }
 
-        public virtual Cita? ClplacaNavigation { get; set; }
+        public virtual Citum? ClplacaNavigation { get; set; }
         public virtual Lavado? CltipoLavadoNavigation { get; set; }
     }
 }

@@ -51,11 +51,11 @@
         <div class="col-lg-5 d-flex flex-column">
           <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto">
             <div class="container">
-              <svg viewBox="0 0 960 300">
+              <svg viewBox="0 0 760 200">
                 <symbol id="s-text">
                   <text text-anchor="middle" x="50%" y="80%">DetailTec</text>
                 </symbol>
-            
+
                 <g class = "g-ants">
                   <use xlink:href="#s-text" class="text-copy"></use>
                   <use xlink:href="#s-text" class="text-copy"></use>
@@ -67,21 +67,19 @@
             </div>
             <!-- <img src="" class="img-fluid"> -->
           </div>
-          <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
-            <h1 class="font-weight-bold mb-4">Bienvenido</h1>
+          <div class=" my-9 p-4 w-100 align-self-center">
             <!-- Se crea el formulario para el inicio de sesión -->
             <form class="mb-5" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
               <div class="mb-4">
-                <label for="exampleInputEmail1" class="form-label font-weight-bold">Email</label>
-                <input type="email" class="form-control bg-dark-x border-0" placeholder="Ingresa tu email" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="usuario">
+                <label for="InputEmail" class="form-label font-weight-bold">Email</label>
+                <input type="email" class="form-control bg-dark-x border-0" placeholder="Ingresa tu correo" id="InputEmail" aria-describedby="emailHelp" formControlName="usuario">
               </div>
               <div class="mb-4">
-                <label for="exampleInputPassword1" class="form-label font-weight-bold">Contraseña</label>
-                <input type="password" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu contraseña" id="exampleInputPassword1" formControlName="password">
-                <a href="#" id="emailHelp" class="form-text text-muted text-decoration-none">¿Has olvidado tu contraseña?</a>
+                <label for="InputPassword" class="form-label font-weight-bold">Contraseña</label>
+                <input type="password" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu Contraseña" id="InputPassword" formControlName="password">
               </div>
               <!-- <button type="submit" class="btn btn-primary w-100" >Iniciar sesión</button> -->
-              <button onclick="location.href='/pdf'" type="button" class="btn btn-primary w-100">Iniciar sesión</button>
+              <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
             </form>
             <!-- <p class="font-weight-bold text-center text-muted">O inicia sesión con</p>
             <div class="d-flex justify-content-around">
@@ -89,11 +87,11 @@
               <button type="submit" class="btn btn-outline-light d-flex-grow-1 ml-4"><i class="fa-brands fa-square-facebook lead mr-6"></i> Facebook </button>
             </div> -->
           </div>
-          <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 w-100 mt-auto">
+          <!--<div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 w-100 mt-auto">
             <p class="d-inline-block mb-0">¿Todavía no tienes una cuenta?</p> <a href='/registro' class="text-light font-weight-bold">Crea una ahora</a>
-          </div>
+          </div>-->
         </div>
-      
+
       </div>
     </section>
   </body>

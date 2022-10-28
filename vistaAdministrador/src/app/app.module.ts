@@ -29,7 +29,8 @@ const appRoutes:Routes=[
   {path: 'proveedores', component:ProveedoresComponent},
   {path: 'insumo', component:InsumoComponent},
   {path: 'lavado', component:LavadoComponent},
-  {path: 'registro', component:RegistroComponent}
+  {path: 'registro', component:RegistroComponent},
+  {path: 'menuAdmin', component:MenuComponent}
 
 ]
 

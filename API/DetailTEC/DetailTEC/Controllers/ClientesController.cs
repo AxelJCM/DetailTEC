@@ -97,6 +97,22 @@ namespace DetailTEC.Controllers
             return CreatedAtAction("GetCliente", new { id = cliente.Ccedula }, cliente);
         }
 
+        [HttpPost]
+        [Route("Login/")]
+
+        public async Task<ActionResult<Login>> PostLogin(Auth auth)
+        {
+            var result = _context.Clientes.Any(e => e.Ccorreo == auth.Usuario && e.Cpassword == auth.Password);
+
+            if (!result)
+            {
+                return BadRequest();
+            }
+
+                return Ok();
+
+        }
+
         // DELETE: api/Clientes/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCliente(int id)

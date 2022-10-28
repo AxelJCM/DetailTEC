@@ -62,7 +62,14 @@ CREATE TABLE Lavado
 	LDuracion INT,
 	LProductos VARCHAR(30),
 	LPersonal VARCHAR(30),
+<<<<<<< HEAD
+	LPuntuacion INT
+=======
 	LPuntuacion INT,
+<<<<<<< Updated upstream
+=======
+>>>>>>> Vista-Administrador
+>>>>>>> Stashed changes
 );
 
 CREATE TABLE Cita
@@ -122,6 +129,14 @@ CREATE TABLE Proveedor_Producto
 	PPDistrito VARCHAR(20)
 );
 
+CREATE TABLE Auth(
+	Usuario VARCHAR(30) NOT NULL,
+	Password VARCHAR(30) NOT NULL,
+);
+
+ALTER TABLE Auth
+	ADD PRIMARY KEY(Usuario,Password);
+
 ALTER TABLE Producto
 	ADD PRIMARY KEY (PMarca,PPlaca,PNombre);
 
@@ -165,6 +180,13 @@ ALTER TABLE Producto
 ADD CONSTRAINT Producto_Cita_FK FOREIGN KEY (PPlaca)
 REFERENCES Cita(CPlaca);
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> Vista-Administrador
+>>>>>>> Stashed changes
 ALTER TABLE Cita
 ADD CONSTRAINT Cita_Cliente_FK FOREIGN KEY (CCCedula)
 REFERENCES Cliente(CCedula);

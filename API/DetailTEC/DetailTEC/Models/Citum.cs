@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace DetailTEC.Models
 {
-    public partial class Cita
+    public partial class Citum
     {
-        public Cita()
+        public Citum()
         {
             Productos = new HashSet<Producto>();
         }

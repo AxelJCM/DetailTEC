@@ -8,3 +8,4 @@ INSERT INTO Sucursal (SNombre,STelefono,SGerente,SFechaIn,SFechaAp,SProvincia,SC
 
 INSERT INTO Trabajador (TNombre,TApellidos,TCedula,TEdad,TFechaIngreso,TFechaNac,TPassword,TPago,TRol,TSNombre) VALUES ('Reiner','Urena Vega',123456789,21,'12-09-2002','10-08-2004','1234Axel','123','Ingeniero','San Marcos')
 
+INSERT INTO Producto (PNombre,PMarca,PPlaca,PCosto,PProveedores) VALUES ('jabon','suli','1234AXEL',123,'Suli')

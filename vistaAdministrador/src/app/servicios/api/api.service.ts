@@ -1,23 +1,25 @@
 import { Injectable } from '@angular/core';
 import { LoginI } from '../../modelos/login.interface'
-import { responseI } from '../../modelos/response.interface'
+import { ResponseI } from '../../modelos/response.interface'
 import { HttpClient, HttpHeaders} from '@angular/common/http'
-import { Observable, observable } from 'rxjs'
+import { Observable } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  /* url:string="http://solodata.es/" */
-  url:string="https://localhost:7185/api/Cliente"
+  url:string="https://localhost:7185/api";
 
   constructor(private http:HttpClient) { }
 
-  loginByEmail(form: any){/* :LoginI):Observable<responseI>{
-    let direccion = this.url;
-    return this.http.post<responseI>(direccion, form); */
-    console.log(form);
+  loginByEmailCliente(form:LoginI):Observable<ResponseI>{
+    let direccion = this.url + "/Clientes/Login";
+    return this.http.post<ResponseI>(direccion, form);   
+  }
+
+  loginByEmailAdmin(form:LoginI):Observable<ResponseI>{
+    let direccion = this.url + "/trabajadores/Login";
+    return this.http.post<ResponseI>(direccion, form);
   }
 }
-/* https://localhost:7185/api/Cliente */

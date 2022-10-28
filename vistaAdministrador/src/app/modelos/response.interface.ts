@@ -1,4 +1,3 @@
-export interface responseI{
-    status:string; /* estos dependen del api */
-    response:string;
+export interface ResponseI{
+    status:any; /* estos dependen del api */
 }

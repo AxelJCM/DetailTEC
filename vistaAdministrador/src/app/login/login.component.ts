@@ -37,9 +37,15 @@ export class LoginComponent implements OnInit {
         this.router.navigate(["menuCliente"]);
       }
       if(dataResponse.status == "Error"){
-        alert("Usuario o contraseña incorrectos");
+        this.api.loginByEmailAdmin(form).subscribe(data =>{
+          let dataResponse:ResponseI = data;
+          if(dataResponse.status == "Ok"){
+            this.router.navigate(["menuAdmin"]);
+          }
+          if(dataResponse.status == "Error"){
+            alert("Usuario o contraseña incorrectos");
+          }
+        })
       }
-    })
-  }
-
-}
+      })
+}}

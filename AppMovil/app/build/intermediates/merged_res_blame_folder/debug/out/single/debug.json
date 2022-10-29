@@ -1,0 +1,146 @@
+[
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\layout_recycler_factura.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\layout\\recycler_factura.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\drawable_menu.png.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\drawable\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\font_cairo_extralight.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\font\\cairo_extralight.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\layout_puntos.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\layout\\puntos.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\drawable_mecanico.png.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\drawable\\mecanico.png"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\font_ubuntu_light.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\font\\ubuntu_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\font_cairo.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\font\\cairo.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\font_cairo_black.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\font\\cairo_black.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\drawable_usuario.jpg.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\drawable\\usuario.jpg"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\font_cairo_light.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\font\\cairo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\layout_menu.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\layout\\menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\font_cairo_semibold.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\font\\cairo_semibold.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mecatec.app-merged_res-30:/layout_registrousuario.xml.flat",
+        "source": "com.example.mecatec.app-main-32:/layout/registrousuario.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\layout_inicio.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\layout\\inicio.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\layout_login.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\layout\\login.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\layout_registrocitas.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\layout\\registrocitas.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\layout_facturacion.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\layout\\facturacion.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\layout_registrousuario.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\layout\\registrousuario.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\font_ticketing.ttf.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\font\\ticketing.ttf"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\font_capriola.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\font\\capriola.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-main-32:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-merged_res-30:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\yarit\\.gradle\\daemon\\7.4\\com.example.mecatec.app-pngs-25:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    }
+]

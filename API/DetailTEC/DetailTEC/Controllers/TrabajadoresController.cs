@@ -92,6 +92,25 @@ namespace DetailTEC.Controllers
             return CreatedAtAction("GetTrabajador", new { id = trabajador.Tcedula }, trabajador);
         }
 
+        [HttpPost]
+        [Route("Login/")]
+        public async Task<ActionResult<Login>> PostLogin(Auth auth)
+        {
+            var result = _context.Trabajadors.Any(e => e.Tusuario == auth.Usuario && e.Tpassword == auth.Password);
+
+            var status = new Login { Status = "Ok" };
+
+            var error = new Login { Status = "Error" };
+
+            if (!result)
+            {
+                return error;
+            }
+
+            return Ok(status);
+
+        }
+
         // DELETE: api/Trabajadores/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTrabajador(int id)

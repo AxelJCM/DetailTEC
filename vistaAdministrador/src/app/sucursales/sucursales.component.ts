@@ -20,15 +20,23 @@ export class SucursalesComponent implements OnInit {
     .getSucursales()
     .subscribe((result: Sucursal[]) => (this.sucursal = result));
   }
-
+  /**
+   *
+   * @param sucursal Edita una sucursal
+   */
   listaActualizada(sucursal: Sucursal[]){
     this.sucursal = sucursal;
   }
-
+  /**
+   * Crea una nueva sucursal
+   */
   crearSucursal(){
     this.sucursalAEditar = new Sucursal();
   }
-
+  /**
+   *
+   * @param sucursales Edita una sucursal
+   */
   editSucursal(sucursales: Sucursal){
     this.sucursalAEditar = sucursales;
   }

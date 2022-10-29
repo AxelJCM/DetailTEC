@@ -19,39 +19,56 @@ export class EditarCitasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+/**
+ * Actualiza cita
+ */
   actualizarCitas(citas:Citas){
     this.citasService
     .actualizarCitas(citas)
     .subscribe((citas: Citas[]) => this.citasActualizados.emit(citas));
   }
-
+/**
+ * Borra Citas
+ * @param citas
+ */
   borrarCitas(citas:Citas){
     this.citasService
     .borrarCitas(citas)
     .subscribe((citas: Citas[]) => this.citasActualizados.emit(citas));
   }
-
+/**
+ * Agrega cita
+ *
+ */
   agregarCitas(citas:Citas){
     this.citasService
     .agregarCitas(citas)
     .subscribe((citas: Citas[]) => this.citasActualizados.emit(citas));
   }
-
+/**
+ * Formulario
+ */
 
   puntosForm = new FormGroup({
     puntos : new FormControl('', [Validators.required]),
     cedula : new FormControl('', [Validators.required]),
   })
-
+/**
+ * Retorna puntos de la cita
+ */
   get Puntos(): FormControl{
     return this.puntosForm.get('puntos') as FormControl;
   }
-
+/**
+ * Retorna cedula de la cita
+ */
   get Cedula(): FormControl{
     return this.puntosForm.get('cedula') as FormControl;
   }
-
+/**
+ *
+ * @param form Post de puntos
+ */
   onPuntos(form:any){
     this.api.puntos(form).subscribe(data =>{
       let dataResponse:PuntosI = data;

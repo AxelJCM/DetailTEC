@@ -20,14 +20,21 @@ namespace DetailTEC.Controllers
             _context = context;
         }
 
-        // GET: api/Productos
+        /// <summary>
+        /// GET: api/Productos
+        /// </summary>
+        /// <returns>Datos de producto</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Producto>>> GetProductos()
         {
             return await _context.Productos.ToListAsync();
         }
 
-        // GET: api/Productos/5
+        /// <summary>
+        /// GET: api/Productos/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Producto>> GetProducto(string id)
         {
@@ -41,8 +48,11 @@ namespace DetailTEC.Controllers
             return producto;
         }
 
-        // PUT: api/Productos/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// PUT: api/Productos/5
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <returns>Cambia datos de producto</returns>
         [HttpPut]
         public async Task<IActionResult> PutProducto(Producto producto)
         {
@@ -68,8 +78,12 @@ namespace DetailTEC.Controllers
             return NoContent();
         }
 
-        // POST: api/Productos
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// POST: api/Productos
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <returns>Crea producto</returns>
+        
         [HttpPost]
         public async Task<ActionResult<Producto>> PostProducto(Producto producto)
         {
@@ -93,7 +107,11 @@ namespace DetailTEC.Controllers
             return CreatedAtAction("GetProducto", new { id = producto.Pmarca }, producto);
         }
 
-        // DELETE: api/Productos/5
+        /// <summary>
+        /// DELETE: api/Productos/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Borra producto</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProducto(string id)
         {
@@ -108,7 +126,11 @@ namespace DetailTEC.Controllers
 
             return NoContent();
         }
-
+        /// <summary>
+        /// Exitencia de producto
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>si o no</returns>
         private bool ProductoExists(string id)
         {
             return _context.Productos.Any(e => e.Pmarca == id);

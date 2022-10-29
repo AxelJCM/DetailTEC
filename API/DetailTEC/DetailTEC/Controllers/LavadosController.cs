@@ -20,14 +20,21 @@ namespace DetailTEC.Controllers
             _context = context;
         }
 
-        // GET: api/Lavados
+        /// <summary>
+        /// GET: api/Lavados
+        /// </summary>
+        /// <returns>lavados</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Lavado>>> GetLavados()
         {
             return await _context.Lavados.ToListAsync();
         }
 
-        // GET: api/Lavados/5
+        /// <summary>
+        /// GET: api/Lavados/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>lavado especifico</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Lavado>> GetLavado(string id)
         {
@@ -41,8 +48,11 @@ namespace DetailTEC.Controllers
             return lavado;
         }
 
-        // PUT: api/Lavados/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// PUT: api/Lavados/5
+        /// </summary>
+        /// <param name="lavado"></param>
+        /// <returns>cambia datos de lavado</returns>
         [HttpPut]
         public async Task<IActionResult> PutLavado(Lavado lavado)
         {
@@ -68,8 +78,11 @@ namespace DetailTEC.Controllers
             return NoContent();
         }
 
-        // POST: api/Lavados
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// POST: api/Lavados
+        /// </summary>
+        /// <param name="lavado"></param>
+        /// <returns>crea un lavado</returns>
         [HttpPost]
         public async Task<ActionResult<Lavado>> PostLavado(Lavado lavado)
         {
@@ -93,7 +106,11 @@ namespace DetailTEC.Controllers
             return CreatedAtAction("GetLavado", new { id = lavado.LtipoLavado }, lavado);
         }
 
-        // DELETE: api/Lavados/5
+        /// <summary>
+        /// DELETE: api/Lavados/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>borra lavado</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteLavado(string id)
         {
@@ -108,7 +125,11 @@ namespace DetailTEC.Controllers
 
             return NoContent();
         }
-
+        /// <summary>
+        /// Existencia de un lavado
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>si lavado existe o no</returns>
         private bool LavadoExists(string id)
         {
             return _context.Lavados.Any(e => e.LtipoLavado == id);

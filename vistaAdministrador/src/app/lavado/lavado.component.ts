@@ -18,15 +18,23 @@ export class LavadoComponent implements OnInit {
     .getLavados()
     .subscribe((result: Lavado[]) => (this.lavado = result));
   }
-
+  /**
+   *
+   * @param lavado Edita un lavado
+   */
   listaActualizada(lavado: Lavado[]){
     this.lavado = lavado;
   }
-
+  /**
+   * Crea un nuevo lavado
+   */
   crearLavado(){
     this.lavadoAEditar = new Lavado();
   }
-
+  /**
+   *
+   * @param lavados Edita un lavado
+   */
   editLavado(lavados: Lavado){
     this.lavadoAEditar = lavados;
   }

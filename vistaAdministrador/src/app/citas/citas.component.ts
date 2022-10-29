@@ -23,15 +23,24 @@ export class CitasComponent implements OnInit {
     .getCitas()
     .subscribe((result: Citas[]) => (this.citas = result));
   }
-
+/**
+ *Actualiza cita
+ * @param cita
+ * @returns
+ */
   listaActualizada(cita: Citas[]){
     this.citas = cita;
   }
-
+/**
+ * Crea cita
+ */
   crearCita(){
     this.citaAEditar = new Citas();
   }
-
+/**
+ *
+ * @param citas Editar cita
+ */
   editCita(citas: Citas){
     this.citaAEditar = citas;
   }

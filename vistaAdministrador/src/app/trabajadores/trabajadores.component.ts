@@ -20,15 +20,25 @@ export class TrabajadoresComponent implements OnInit {
     .getTrabajadores()
     .subscribe((result: Trabajador[]) => (this.trabajador = result));
   }
-
+  /**
+   *
+   * @param trabajador
+   * @returns true si el trabajador es el que se está editando
+   */
   listaActualizada(trabajador: Trabajador[]){
     this.trabajador = trabajador;
   }
-
+  /**
+   * Crea un nuevo trabajador
+   */
   crearTrabajador(){
     this.trabajadorAEditar = new Trabajador();
   }
-
+  /**
+   *
+   * @param trabajadores Edita un trabajador
+   * @returns true si el trabajador es el que se está editando
+   */
   editTrabajador(trabajadores: Trabajador){
     this.trabajadorAEditar = trabajadores;
   }

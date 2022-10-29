@@ -20,14 +20,21 @@ namespace DetailTEC.Controllers
             _context = context;
         }
 
-        // GET: api/Citas
+        /// <summary>
+        /// GET: api/Citas
+        /// </summary>
+        /// <returns>Todos los datos de Cita</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cita>>> GetCita()
         {
             return await _context.Cita.ToListAsync();
         }
 
-        // GET: api/Citas/5
+        /// <summary>
+        /// GET: api/Citas/5
+        /// </summary>
+        /// <param  cita="id"></param>
+        /// <returns>Retorna una cita especifica</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Cita>> GetCita(string id)
         {
@@ -41,8 +48,12 @@ namespace DetailTEC.Controllers
             return cita;
         }
 
-        // PUT: api/Citas/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// PUT: api/Citas/5
+        /// </summary>
+        /// <param name="cita"></param>
+        /// <returns>Cambia datos de una cita especifica</returns>
+   
         [HttpPut]
         public async Task<IActionResult> PutCita(Cita cita)
         {
@@ -68,8 +79,12 @@ namespace DetailTEC.Controllers
             return NoContent();
         }
 
-        // POST: api/Citas
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// POST: api/Citas
+        /// </summary>
+        /// <param name="cita"></param>
+        /// <returns>Crea una nueva cita</returns>
+       
         [HttpPost]
         public async Task<ActionResult<Cita>> PostCita(Cita cita)
         {
@@ -93,7 +108,11 @@ namespace DetailTEC.Controllers
             return CreatedAtAction("GetCita", new { id = cita.Cplaca }, cita);
         }
 
-        // DELETE: api/Citas/5
+        /// <summary>
+        /// DELETE: api/Citas/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Borra una cita especifica</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCita(string id)
         {

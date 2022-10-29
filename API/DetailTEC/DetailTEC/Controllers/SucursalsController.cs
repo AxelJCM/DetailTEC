@@ -20,14 +20,21 @@ namespace DetailTEC.Controllers
             _context = context;
         }
 
-        // GET: api/Sucursals
+        /// <summary>
+        /// GET: api/Sucursals
+        /// </summary>
+        /// <returns>Datos sucursal</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Sucursal>>> GetSucursals()
         {
             return await _context.Sucursals.ToListAsync();
         }
 
-        // GET: api/Sucursals/5
+        /// <summary>
+        /// GET: api/Sucursals/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Datos sucursal especifico</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Sucursal>> GetSucursal(string id)
         {
@@ -41,8 +48,12 @@ namespace DetailTEC.Controllers
             return sucursal;
         }
 
-        // PUT: api/Sucursals/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// PUT: api/Sucursals/5
+        /// </summary>
+        /// <param name="sucursal"></param>
+        /// <returns>Cambia sucursal</returns>
+
         [HttpPut]
         public async Task<IActionResult> PutSucursal(Sucursal sucursal)
         {
@@ -68,8 +79,11 @@ namespace DetailTEC.Controllers
             return NoContent();
         }
 
-        // POST: api/Sucursals
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// POST: api/Sucursals
+        /// </summary>
+        /// <param name="sucursal"></param>
+        /// <returns>Crea sucursal</returns>
         [HttpPost]
         public async Task<ActionResult<Sucursal>> PostSucursal(Sucursal sucursal)
         {
@@ -93,7 +107,11 @@ namespace DetailTEC.Controllers
             return CreatedAtAction("GetSucursal", new { id = sucursal.Snombre }, sucursal);
         }
 
-        // DELETE: api/Sucursals/5
+        /// <summary>
+        /// DELETE: api/Sucursals/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Borra Sucursal</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSucursal(string id)
         {

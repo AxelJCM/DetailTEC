@@ -15,19 +15,28 @@ export class EditarProductosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+/**
+ *
+ * @param productos Edita un producto
+ */
   actualizarInsumos(productos:Insumos){
     this.productosService
     .actualizarProductos(productos)
     .subscribe((productos: Insumos[]) => this.productosActualizados.emit(productos));
   }
-
+/**
+ *
+ * @param productos Elimina un producto
+ */
   borrarInsumos(productos:Insumos){
     this.productosService
     .borrarProductos(productos)
     .subscribe((productos: Insumos[]) => this.productosActualizados.emit(productos));
   }
-
+/**
+ *
+ * @param productos Crea un nuevo producto
+ */
   agregarInsumos(productos:Insumos){
     this.productosService
     .agregarProductos(productos)

@@ -20,15 +20,23 @@ export class ProveedoresComponent implements OnInit {
     .getProveedores()
     .subscribe((result: Proveedor[]) => (this.proveedor = result));
   }
-
+  /**
+   *
+   * @param proveedor Edita un proveedor
+   */
   listaActualizada(proveedor: Proveedor[]){
     this.proveedor = proveedor;
   }
-
+  /**
+   * Crea un nuevo proveedor
+   */
   crearProveedor(){
     this.proveedorAEditar = new Proveedor();
   }
-
+  /**
+   *
+   * @param proveedores Edita un proveedor
+   */
   editProveedor(proveedores: Proveedor){
     this.proveedorAEditar = proveedores;
   }

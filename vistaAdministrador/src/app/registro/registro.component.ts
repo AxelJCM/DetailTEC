@@ -20,15 +20,23 @@ export class RegistroComponent implements OnInit {
     .getClientes()
     .subscribe((result: Cliente[]) => (this.cliente = result));
   }
-
+  /**
+   *
+   * @param cliente Edita un cliente
+   */
   listaActualizada(cliente: Cliente[]){
     this.cliente = cliente;
   }
-
+  /**
+   * Crea un nuevo cliente
+   */
   crearCliente(){
     this.clienteAEditar = new Cliente();
   }
-
+  /**
+   *
+   * @param clientes Edita un cliente
+   */
   editCliente(clientes: Cliente){
     this.clienteAEditar = clientes;
   }

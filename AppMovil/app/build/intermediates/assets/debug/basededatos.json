@@ -1,0 +1,13 @@
+{
+	"nombre" : "Axel",
+	"numero" : 64839332,
+	"usuario" : "AxelJCM",
+	"contrasena" : "1234",
+	"facturas" :[
+			{
+				"fecha": "12/12/2022",
+				"hora": "2:00pm"
+			}]
+}
+
+				

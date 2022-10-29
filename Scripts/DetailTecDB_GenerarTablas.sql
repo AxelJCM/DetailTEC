@@ -30,8 +30,8 @@ CREATE TABLE Trabajador
 	TPassword VARCHAR(30),
 	TPago VARCHAR(20),
 	TRol VARCHAR(20),
+	TUsuario VARCHAR(20),
 	TSNombre VARCHAR(20)
-	
 );
 
 CREATE TABLE Proveedor
@@ -208,4 +208,3 @@ REFERENCES Lavado(LTipoLavado);
 ALTER TABLE Cita_Lavado
 ADD CONSTRAINT CL_Cita_FK FOREIGN KEY (CLPlaca)
 REFERENCES Cita(CPlaca);
-

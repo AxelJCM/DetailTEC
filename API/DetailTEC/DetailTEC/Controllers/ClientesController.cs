@@ -113,16 +113,6 @@ namespace DetailTEC.Controllers
 
         }
 
-        [HttpPost]
-        [Route("Puntos/")]
-
-        /*public async Task<ActionResult<Cliente>> PostPuntos(Cliente cliente)
-        {
-
-            var puntos = new Cliente { id = cliente.Cpuntos };
-
-        }*/
-
         // DELETE: api/Clientes/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCliente(int id)

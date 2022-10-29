@@ -1,0 +1,11 @@
+Scaffold-DbContext "Server=.\SQLExpress;Database=DetailTECdb;Trusted_Connection=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+builder.Services.AddDbContext<DetailTECdbContext>();
+
+builder.Services.AddCors(options => options.AddPolicy(name: "TrabajadorOrigins",
+    policy =>
+    {
+        policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+    }));
+
+app.UseCors("TrabajadorOrigins");

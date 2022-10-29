@@ -20,14 +20,21 @@ namespace DetailTEC.Controllers
             _context = context;
         }
 
-        // GET: api/Trabajadores
+        /// <summary>
+        /// GET: api/Trabajadores
+        /// </summary>
+        /// <returns>Datos trabajador</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Trabajador>>> GetTrabajadors()
         {
             return await _context.Trabajadors.ToListAsync();
         }
 
-        // GET: api/Trabajadores/5
+        /// <summary>
+        /// GET: api/Trabajadores/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Datos de trabajador especifico</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Trabajador>> GetTrabajador(int id)
         {
@@ -41,8 +48,11 @@ namespace DetailTEC.Controllers
             return trabajador;
         }
 
-        // PUT: api/Trabajadores/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// PUT: api/Trabajadores/5
+        /// </summary>
+        /// <param name="trabajador"></param>
+        /// <returns>Cambia datos de admin</returns>
         [HttpPut]
         public async Task<IActionResult> PutTrabajador(Trabajador trabajador)
         {
@@ -67,8 +77,11 @@ namespace DetailTEC.Controllers
             return NoContent();
         }
 
-        // POST: api/Trabajadores
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// POST: api/Trabajadores
+        /// </summary>
+        /// <param name="trabajador"></param>
+        /// <returns>Crea trabajador</returns>
         [HttpPost]
         public async Task<ActionResult<Trabajador>> PostTrabajador(Trabajador trabajador)
         {
@@ -91,7 +104,11 @@ namespace DetailTEC.Controllers
 
             return CreatedAtAction("GetTrabajador", new { id = trabajador.Tcedula }, trabajador);
         }
-
+        /// <summary>
+        /// Verificacion Admin
+        /// </summary>
+        /// <param name="auth"></param>
+        /// <returns>Verificacion de admin</returns>
         [HttpPost]
         [Route("Login/")]
         public async Task<ActionResult<Login>> PostLogin(Auth auth)
@@ -111,7 +128,11 @@ namespace DetailTEC.Controllers
 
         }
 
-        // DELETE: api/Trabajadores/5
+        /// <summary>
+        /// DELETE: api/Trabajadores/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Borra trabajador</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTrabajador(int id)
         {

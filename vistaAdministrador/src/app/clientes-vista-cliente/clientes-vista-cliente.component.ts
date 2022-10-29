@@ -19,15 +19,23 @@ export class ClientesVistaClienteComponent implements OnInit {
     .getVistaClientes()
     .subscribe((result: VistaCliente[]) => (this.vcliente = result));
   }
-
+  /**
+   * Actualiza el listado de clientes
+   * @param vcliente
+   */
   listaActualizada(vcliente: VistaCliente[]){
     this.vcliente = vcliente;
   }
-
+/**
+ * Crea un nuevo cliente
+ */
   crearVCliente(){
     this.vclienteAEditar = new VistaCliente();
   }
-
+/**
+ *
+ * @param vclientes Edita un cliente
+ */
   editVCliente(vclientes: VistaCliente){
     this.vclienteAEditar = vclientes;
   }

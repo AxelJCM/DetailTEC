@@ -15,19 +15,28 @@ export class EditarTrabajadorComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  /**
+   *
+   * @param trabajador Edita un trabajador
+   */
   actualizarTrabajador(trabajador:Trabajador){
     this.trabajadorService
     .actualizarTrabajadores(trabajador)
     .subscribe((trabajadores: Trabajador[]) => this.trabajadoresActualizados.emit(trabajadores));
   }
-
+  /**
+   *
+   * @param trabajador Elimina un trabajador
+   */
   borrarTrabajador(trabajador:Trabajador){
     this.trabajadorService
     .borrarTrabajadores(trabajador)
     .subscribe((trabajadores: Trabajador[]) => this.trabajadoresActualizados.emit(trabajadores));
   }
-
+  /**
+   *
+   * @param trabajador Crea un nuevo trabajador
+   */
   agregarTrabajador(trabajador:Trabajador){
     this.trabajadorService
     .agregarTrabajadores(trabajador)

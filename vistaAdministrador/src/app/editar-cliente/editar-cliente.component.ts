@@ -15,19 +15,28 @@ export class EditarClienteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+/**
+ *
+ * @param cliente Edita un cliente
+ */
   actualizarCliente(cliente:Cliente){
     this.clienteService
     .actualizarClientes(cliente)
     .subscribe((clientes: Cliente[]) => this.clientesActualizados.emit(clientes));
   }
-
+/**
+ *
+ * @param cliente Elimina un cliente
+ */
   borrarCliente(cliente:Cliente){
     this.clienteService
     .borrarClientes(cliente)
     .subscribe((clientes: Cliente[]) => this.clientesActualizados.emit(clientes));
   }
-
+/**
+ *
+ * @param cliente Crea un nuevo cliente
+ */
   agregarCliente(cliente:Cliente){
     this.clienteService
     .agregarClientes(cliente)

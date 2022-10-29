@@ -15,19 +15,28 @@ export class EditarClienteVistaClienteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+/**
+ *
+ * @param cliente Edita un cliente
+ */
   actualizarVistaCliente(cliente:VistaCliente){
     this.VistaClienteService
     .actualizarVistaClientes(cliente)
     .subscribe((clientes: VistaCliente[]) => this.vclientesActualizados.emit(clientes));
   }
-
+/**
+ *
+ * @param cliente Elimina un cliente
+ */
   borrarVistaCliente(cliente:VistaCliente){
     this.VistaClienteService
     .borrarVistaClientes(cliente)
     .subscribe((clientes: VistaCliente[]) => this.vclientesActualizados.emit(clientes));
   }
-
+/**
+ *
+ * @param cliente Crea un nuevo cliente
+ */
   agregarVistaCliente(cliente:VistaCliente){
     this.VistaClienteService
     .agregarVistaClientes(cliente)

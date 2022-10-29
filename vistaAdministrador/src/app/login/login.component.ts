@@ -11,16 +11,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+/**
+ * @description Funcion que se encarga de crear el formulario
+ * con sus respectivas validaciones
+ * @returns FormGroup
+ */
   loginForm = new FormGroup({
     usuario : new FormControl('', [Validators.required, Validators.email]),
     password : new FormControl('', Validators.required)
   })
-
+  /**
+   * @description Funcion que se encarga de limpiar el formulario
+   */
   get User(): FormControl{
     return this.loginForm.get('usuario') as FormControl;
   }
-
+  /**
+   * @description Funcion que se encarga de limpiar el formulario
+   */
   get PWD(): FormControl{
     return this.loginForm.get('password') as FormControl;
   }
@@ -29,7 +37,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+/**
+ *
+ * @param form LoginI
+ * @returns ResponseI
+ * @description Funcion que se encarga de enviar los datos del formulario al servicio
+ * para que este los envie al backend y este los procese
+ */
   onLogin(form:any){
     this.api.loginByEmailCliente(form).subscribe(data =>{
       let dataResponse:ResponseI = data;

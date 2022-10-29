@@ -20,14 +20,21 @@ namespace DetailTEC.Controllers
             _context = context;
         }
 
-        // GET: api/Proveedors
+        /// <summary>
+        /// GET: api/Proveedors
+        /// </summary>
+        /// <returns>datos de proveedor</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Proveedor>>> GetProveedors()
         {
             return await _context.Proveedors.ToListAsync();
         }
 
-        // GET: api/Proveedors/5
+        /// <summary>
+        /// GET: api/Proveedors/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>datos de proveedor especifico</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Proveedor>> GetProveedor(int id)
         {
@@ -41,8 +48,11 @@ namespace DetailTEC.Controllers
             return proveedor;
         }
 
-        // PUT: api/Proveedors/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// PUT: api/Proveedors/5
+        /// </summary>
+        /// <param name="proveedor"></param>
+        /// <returns> Cambia datos de proveedor</returns>
         [HttpPut]
         public async Task<IActionResult> PutProveedor(Proveedor proveedor)
         {
@@ -68,8 +78,11 @@ namespace DetailTEC.Controllers
             return NoContent();
         }
 
-        // POST: api/Proveedors
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// POST: api/Proveedors
+        /// </summary>
+        /// <param name="proveedor"></param>
+        /// <returns>Crea proveedor</returns>
         [HttpPost]
         public async Task<ActionResult<Proveedor>> PostProveedor(Proveedor proveedor)
         {
@@ -93,7 +106,11 @@ namespace DetailTEC.Controllers
             return CreatedAtAction("GetProveedor", new { id = proveedor.PcedulaJuridica }, proveedor);
         }
 
-        // DELETE: api/Proveedors/5
+        /// <summary>
+        /// DELETE: api/Proveedors/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Borra datos de proveedor</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProveedor(int id)
         {

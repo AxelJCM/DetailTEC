@@ -18,15 +18,23 @@ export class InsumoComponent implements OnInit {
     .getInsumos()
     .subscribe((result: Insumos[]) => (this.insumos = result));
   }
-
+  /**
+   *
+   * @param insumo Edita un insumo
+   */
   listaActualizada(insumo: Insumos[]){
     this.insumos = insumo;
   }
-
+  /**
+   * Crea un nuevo insumo
+   */
   crearInsumo(){
     this.insumoAEditar = new Insumos();
   }
-
+  /**
+   *
+   * @param insumos Edita un insumo
+   */
   editInsumo(insumos: Insumos){
     this.insumoAEditar = insumos;
   }

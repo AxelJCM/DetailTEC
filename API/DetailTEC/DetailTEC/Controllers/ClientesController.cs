@@ -20,14 +20,21 @@ namespace DetailTEC.Controllers
             _context = context;
         }
 
-        // GET: api/Clientes
+        /// <summary>
+        /// GET: api/Clientes
+        /// </summary>
+        /// <returns>Datos de clientes</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cliente>>> GetClientes()
         {
             return await _context.Clientes.ToListAsync();
         }
 
-        // GET: api/Clientes/5
+        /// <summary>
+        /// GET: api/Clientes/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Datos de cliente especifico</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Cliente>> GetCliente(int id)
         {
@@ -41,8 +48,11 @@ namespace DetailTEC.Controllers
             return cliente;
         }
 
-        // PUT: api/Clientes/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// PUT: api/Clientes/5
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <returns>Cambia datos de un cliente</returns>
         [HttpPut]
         public async Task<IActionResult> PutCliente(Cliente cliente)
         {
@@ -68,8 +78,11 @@ namespace DetailTEC.Controllers
             return NoContent();
         }
 
-        // POST: api/Clientes
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// POST: api/Clientes
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <returns>Creacion de cliente</returns>
         [HttpPost]
         public async Task<ActionResult<Cliente>> PostCliente(Cliente cliente)
         {
@@ -92,7 +105,11 @@ namespace DetailTEC.Controllers
 
             return CreatedAtAction("GetCliente", new { id = cliente.Ccedula }, cliente);
         }
-
+        /// <summary>
+        /// Revision de login de cliente
+        /// </summary>
+        /// <param name="auth"></param>
+        /// <returns>Confirmacion de login</returns>
         [HttpPost]
         [Route("Login/")]
 
@@ -113,7 +130,11 @@ namespace DetailTEC.Controllers
 
         }
 
-        // DELETE: api/Clientes/5
+        /// <summary>
+        /// DELETE: api/Clientes/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Borra un cliente</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCliente(int id)
         {
@@ -128,7 +149,11 @@ namespace DetailTEC.Controllers
 
             return NoContent();
         }
-
+        /// <summary>
+        /// Revisa si existe un cliente
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>existencia de un cliente</returns>
         private bool ClienteExists(int id)
         {
             return _context.Clientes.Any(e => e.Ccedula == id);

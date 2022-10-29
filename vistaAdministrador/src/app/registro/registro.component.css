@@ -1,0 +1,66 @@
+:root{
+    --dark: #16191c;
+    --dark-x: #1e2126;
+    --ligth: #ffffff;
+}
+
+/* html{
+  height: 100%;
+  background-color: #04AA6D;
+}
+body{
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #04AA6D;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+
+}
+
+label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding: 8px;
+    display: block;
+    margin: 1.5em 0 0 0;
+}
+.text-light{
+  text-align: left;
+}
+
+.Citas {
+  justify-content: center;
+  width: 400px;
+  padding: 1rem;
+  margin: 2rem;
+  background-color: rgb(51, 51, 51, 0.602);
+  text-align: center;
+}
+.Boton {
+  padding: 1rem;
+  font-weight: 400;
+  background-color: #e7e7e7;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .9rem;
+  margin-top: 2rem;
+  transition: all .3s ease-in;
+  color: #16191c;
+}
+
+div {
+  margin: 1.5em 0;
+}
+
+  
+  .success {background-color: #04AA6D;} 
+  .info {background-color: #2196F3;} 
+  .warning {background-color: #ff9800;} 
+  .danger {background-color: #f44336;} 
+  .other {background-color: #e7e7e7; color: black;} 
+.bg-dark {background-color: var(--dark) !important;}
+.bg-dark-x {background-color: var(--dark-x);} */

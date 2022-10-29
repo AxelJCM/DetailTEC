@@ -1,0 +1,62 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         <h1 class="modal-title fs-5" id="exampleModalLabel">Datos de la sucursal</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+              <div class="col">
+                  <div *ngIf="sucursal">
+                      <br><br>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Nombre</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="sucursal.snombre">
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Teléfono</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="sucursal.stelefono">
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Gerente</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="sucursal.sgerente">
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Fecha de inicio de Gerencia</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="sucursal.sfechaIn">
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Fecha de Apertura</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="sucursal.sfechaAp">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Provincia</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="sucursal.sprovincia">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Cantón</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="sucursal.scanton">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Distrito</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="sucursal.sdistrito">
+                      </div>
+                      <button (click)="agregarSucursal(sucursal)" *ngIf="sucursal.snombre" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
+                      <button (click)="borrarSucursal(sucursal)" *ngIf="sucursal.snombre" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
+                      <button (click)="actualizarSucursal(sucursal)" *ngIf="sucursal.snombre" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
+                  </div>
+                  <div class="col">
+      
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+     </div>
+      </div>
+      </div>
+  </div>

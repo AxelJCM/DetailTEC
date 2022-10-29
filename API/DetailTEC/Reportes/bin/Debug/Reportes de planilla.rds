@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Reportes de planilla">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=DESKTOP-K62QDG5\SQLEXPRESS;Initial Catalog=DetailTECdb</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
+    <Prompt>Especifique un nombre de usuario y una contraseña para el origen de datos Reportes de planilla</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>09b467d3-fc49-4f59-aabd-c9dd1df1795d</DataSourceID>
+</RptDataSource>

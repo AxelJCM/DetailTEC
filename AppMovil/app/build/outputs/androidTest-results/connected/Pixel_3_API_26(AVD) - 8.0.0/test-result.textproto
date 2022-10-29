@@ -1,0 +1,68 @@
+# 2022-10-20T01:36:25.883Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 1
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "ExampleInstrumentedTest"
+    test_package: "com.example.mecatec"
+    test_method: "useAppContext"
+    start_time {
+      seconds: 1666229781
+      nanos: 552000000
+    }
+    end_time {
+      seconds: 1666229781
+      nanos: 613000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\yarit\\OneDrive\\Escritorio\\AppMovil\\app\\build\\outputs\\androidTest-results\\connected\\Pixel_3_API_26(AVD) - 8.0.0\\logcat-com.example.mecatec.ExampleInstrumentedTest-useAppContext.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\yarit\\OneDrive\\Escritorio\\AppMovil\\app\\build\\outputs\\androidTest-results\\connected\\Pixel_3_API_26(AVD) - 8.0.0\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\yarit\\OneDrive\\Escritorio\\AppMovil\\app\\build\\outputs\\androidTest-results\\connected\\Pixel_3_API_26(AVD) - 8.0.0\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\yarit\\OneDrive\\Escritorio\\AppMovil\\app\\build\\outputs\\androidTest-results\\connected\\Pixel_3_API_26(AVD) - 8.0.0\\cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "C:\\Users\\yarit\\OneDrive\\Escritorio\\AppMovil\\app\\build\\outputs\\androidTest-results\\connected\\Pixel_3_API_26(AVD) - 8.0.0\\testlog\\test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

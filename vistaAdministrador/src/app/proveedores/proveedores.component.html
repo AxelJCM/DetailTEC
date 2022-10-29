@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="proveedores.component.css">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <h1 style="color: aliceblue;">Gestión de Proveedores</h1>
+      <div class="d-flex">
+        <button type="button" (click)="crearProveedor()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Gestionar</button>
+  
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <div>
+                  <br>
+                  <table class="table mt-2">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="group-item-action">#</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Cédula Jurídica</th>
+                          <!-- <th scope="col">Dirección</th> -->
+                          <th scope="col">Correo electrónico</th>
+                          <th scope="col">Contacto</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let proveedores of proveedor; let i=index">
+                          <th scope="row">{{i+1}}</th>
+                          <td>{{proveedores.pnombre}}</td>
+                          <td>{{proveedores.pcedulaJuridica}}</td>
+                          <!-- <td>{{proveedores.pdireccion}}</td> -->
+                          <td>{{proveedores.pcorreo}}</td>
+                          <td>{{proveedores.pcontacto}}</td>
+                        </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+<app-editar-proveedores
+[proveedor]="proveedorAEditar"
+(proveedoresActualizados)="listaActualizada($event)"
+></app-editar-proveedores>
+</html>

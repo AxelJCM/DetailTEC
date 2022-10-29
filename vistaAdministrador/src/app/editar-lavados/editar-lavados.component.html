@@ -1,0 +1,66 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         <h1 class="modal-title fs-5" id="exampleModalLabel">Datos del trabajador</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+              <div class="col">
+                  <div *ngIf="lavado">
+                      <br><br>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Tipo</span >
+                        
+                          <select name="Servicios" id="Servicios" [(ngModel)]="lavado.ltipoLavado">
+                            <option value= "LA"> Lavado y Aspirado</option> 
+                            <option value= "LE"> Lavado y encerado</option>
+                            <option value= "LP"> Lavado premium</option>
+                            <option value= "P"> Pulido</option>
+                          </select> 
+                    
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Costo</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="lavado.lcosto">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Precio</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="lavado.lprecio">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Duracion</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="lavado.lduracion">
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Producto</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="lavado.lproductos">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Personal</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="lavado.lpersonal">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Puntuación</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="lavado.lpuntuacion">
+                    </div>
+                      <button (click)="agregarLavado(lavado)" *ngIf="lavado.ltipoLavado" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
+                      <button (click)="borrarLavado(lavado)" *ngIf="lavado.ltipoLavado" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
+                      <button (click)="actualizarLavado(lavado)" *ngIf="lavado.ltipoLavado" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
+                  </div>
+                  <div class="col">
+      
+      
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+     </div>
+      </div>
+      </div>
+  </div>

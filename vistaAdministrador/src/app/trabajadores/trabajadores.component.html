@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="trabajadores.component.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <h1 style="color: aliceblue;">Gestión de Trabajadores</h1>
+      <div class="d-flex">
+        <button type="button" (click)="crearTrabajador()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Gestionar</button>
+
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <div>
+                  <br>
+                  <table class="table mt-2">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="group-item-action">#</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellidos</th>
+                          <th scope="col">Cedula</th>
+                          <th scope="col">Fecha de ingreso</th>
+                          <th scope="col">Fecha de nacimiento</th>
+                          <th scope="col">Edad</th>
+                          <th scope="col">Password</th>
+                          <th scope="col">Rol</th>
+                          <th scope="col">Tipo de pago</th>
+                          <th scope="col">Nombre de Sucursal</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let trabajadores of trabajador; let i=index">
+                          <th scope="row">{{i+1}}</th>
+                          <td>{{trabajadores.tnombre}}</td>
+                          <td>{{trabajadores.tapellidos}}</td>
+                          <td>{{trabajadores.tcedula}}</td>
+                          <td>{{trabajadores.tfechaIngreso}}</td>
+                          <td>{{trabajadores.tfechaNac}}</td>
+                          <td>{{trabajadores.tedad}}</td>
+                          <td>{{trabajadores.tpassword}}</td>
+                          <td>{{trabajadores.trol}}</td>
+                          <td>{{trabajadores.tpago}}</td>
+                          <td>{{trabajadores.tsnombre}}</td>
+                          <!-- <td>
+                            <button (click)="editTrabajador(trabajadores)" class="btn btn-info">Editar</button>
+                            <button class="btn btn-danger mx-3">Eliminar</button>
+                          </td> -->
+                        </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+<app-editar-trabajador
+[trabajador]="trabajadorAEditar"
+(trabajadoresActualizados)="listaActualizada($event)"
+></app-editar-trabajador>
+</html>
+
+

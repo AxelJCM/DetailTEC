@@ -1,0 +1,80 @@
+<div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         <h1 class="modal-title fs-5" id="exampleModalLabel">Datos del trabajador</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+              <div class="col">
+                  <div *ngIf="trabajador">
+                      <br><br>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Nombre</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tnombre">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Apellidos</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tapellidos">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Cédula</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tcedula">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Fecha de ingreso</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tfechaIngreso">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Fecha de nacimiento</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tfechaNac">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Edad</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tedad">
+                      </div>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">Password</span>
+                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tpassword">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="inputState" class="form-label">Rol</label>
+                        <select id="inputState" class="form-select" [(ngModel)]="trabajador.trol">
+                          <option>Lavador</option>
+                          <option>Pulidor</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="inputState" class="form-label">Tipo de Pago</label>
+                        <select id="inputState" class="form-select" [(ngModel)]="trabajador.tpago">
+                          <option>Semanal</option>
+                          <option>Bisemanal</option>
+                        </select>
+                      </div>
+                      <br>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Sucursal</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tsnombre">
+                    </div>
+
+                      <button (click)="agregarTrabajador(trabajador)" *ngIf="trabajador.tcedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
+                      <button (click)="borrarTrabajador(trabajador)" *ngIf="trabajador.tcedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
+                      <button (click)="actualizarTrabajador(trabajador)" *ngIf="trabajador.tcedula" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
+                  </div>
+                  <div class="col">
+
+
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <!-- <button type="button" class="btn btn-primary">Guardar</button> -->
+     </div>
+      </div>
+      </div>
+  </div>

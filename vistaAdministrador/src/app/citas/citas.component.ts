@@ -1,4 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { PuntosI } from '../modelos/puntos.interface';
+import { ApiService } from '../servicios/api/api.service';
 import { CitasService } from '../servicios/api/citas.service';
 import { Citas } from './cita.model';
 

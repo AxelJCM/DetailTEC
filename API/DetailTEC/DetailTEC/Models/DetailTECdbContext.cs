@@ -45,7 +45,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Auth>(entity =>
             {
                 entity.HasKey(e => new { e.Usuario, e.Password })
-                    .HasName("PK__Auth__BB5A7547D166DCE7");
+                    .HasName("PK__Auth__BB5A75473D0DA9F7");
 
                 entity.ToTable("Auth");
 
@@ -88,7 +88,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Cita>(entity =>
             {
                 entity.HasKey(e => e.Cplaca)
-                    .HasName("PK__Cita__00FC8BF1FDD3B808");
+                    .HasName("PK__Cita__00FC8BF156D06B3F");
 
                 entity.Property(e => e.Cplaca)
                     .HasMaxLength(15)
@@ -121,7 +121,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Cliente>(entity =>
             {
                 entity.HasKey(e => e.Ccedula)
-                    .HasName("PK__Cliente__02E5F6F42604751E");
+                    .HasName("PK__Cliente__02E5F6F445626D88");
 
                 entity.ToTable("Cliente");
 
@@ -159,6 +159,8 @@ namespace DetailTEC.Models
                     .IsUnicode(false)
                     .HasColumnName("CProvincia");
 
+                entity.Property(e => e.Cpuntos).HasColumnName("CPuntos");
+
                 entity.Property(e => e.Cusuario)
                     .HasMaxLength(50)
                     .IsUnicode(false)
@@ -168,7 +170,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Direccion>(entity =>
             {
                 entity.HasKey(e => new { e.Dprovincia, e.Dcanton, e.Ddistrito })
-                    .HasName("PK__Direccio__38F2EE3EDE9A93BF");
+                    .HasName("PK__Direccio__38F2EE3EC826EE4D");
 
                 entity.ToTable("Direccion");
 
@@ -198,7 +200,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Lavado>(entity =>
             {
                 entity.HasKey(e => e.LtipoLavado)
-                    .HasName("PK__Lavado__9B4C8C9CE06164A9");
+                    .HasName("PK__Lavado__9B4C8C9CFB30F5F8");
 
                 entity.ToTable("Lavado");
 
@@ -229,7 +231,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Producto>(entity =>
             {
                 entity.HasKey(e => new { e.Pmarca, e.Pplaca, e.Pnombre })
-                    .HasName("PK__Producto__6D4A15626DD90692");
+                    .HasName("PK__Producto__6D4A15621835E14A");
 
                 entity.ToTable("Producto");
 
@@ -265,7 +267,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Proveedor>(entity =>
             {
                 entity.HasKey(e => e.PcedulaJuridica)
-                    .HasName("PK__Proveedo__AD8F4338695EC86F");
+                    .HasName("PK__Proveedo__AD8F4338BE7CB8B4");
 
                 entity.ToTable("Proveedor");
 
@@ -365,7 +367,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Sucursal>(entity =>
             {
                 entity.HasKey(e => e.Snombre)
-                    .HasName("PK__Sucursal__7D947843C5FBA624");
+                    .HasName("PK__Sucursal__7D9478432964621C");
 
                 entity.ToTable("Sucursal");
 
@@ -434,7 +436,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Telefono>(entity =>
             {
                 entity.HasKey(e => e.Telefono1)
-                    .HasName("PK__Telefono__4EC50481758270F6");
+                    .HasName("PK__Telefono__4EC50481272EE060");
 
                 entity.ToTable("Telefono");
 
@@ -453,7 +455,7 @@ namespace DetailTEC.Models
             modelBuilder.Entity<Trabajador>(entity =>
             {
                 entity.HasKey(e => e.Tcedula)
-                    .HasName("PK__Trabajad__FC581437472DECE9");
+                    .HasName("PK__Trabajad__FC5814375D491636");
 
                 entity.ToTable("Trabajador");
 

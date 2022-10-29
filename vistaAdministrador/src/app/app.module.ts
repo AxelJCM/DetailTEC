@@ -22,6 +22,7 @@ import { EditarProductosComponent } from './editar-productos/editar-productos.co
 import { EditarLavadosComponent } from './editar-lavados/editar-lavados.component';
 import { CitasComponent } from './citas/citas.component';
 import { EditarCitasComponent } from './editar-citas/editar-citas.component';
+import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
 
 const appRoutes:Routes=[
   /* {path: '', component:PrincipalComponent}, */
@@ -34,6 +35,7 @@ const appRoutes:Routes=[
   {path: 'registro', component:RegistroComponent},
   {path: 'menuAdmin', component:MenuComponent},
   {path: 'citas', component:CitasComponent},
+  {path: 'menuCliente', component:MenuClienteComponent}
 
 ]
 
@@ -57,6 +59,7 @@ const appRoutes:Routes=[
     EditarLavadosComponent,
     CitasComponent,
     EditarCitasComponent,
+    MenuClienteComponent,
 
 
   ],

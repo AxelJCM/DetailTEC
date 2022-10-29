@@ -3,6 +3,7 @@ import { LoginI } from '../../modelos/login.interface'
 import { ResponseI } from '../../modelos/response.interface'
 import { HttpClient, HttpHeaders} from '@angular/common/http'
 import { Observable } from 'rxjs'
+import { PuntosI } from 'src/app/modelos/puntos.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +22,10 @@ export class ApiService {
   loginByEmailAdmin(form:LoginI):Observable<ResponseI>{
     let direccion = this.url + "/trabajadores/Login";
     return this.http.post<ResponseI>(direccion, form);
+  }
+
+  puntos(form:LoginI):Observable<PuntosI>{
+    let direccion = this.url + "";
+    return this.http.post<PuntosI>(direccion, form);
   }
 }

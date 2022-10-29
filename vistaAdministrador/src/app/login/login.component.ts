@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     this.api.loginByEmailCliente(form).subscribe(data =>{
       let dataResponse:ResponseI = data;
       if(dataResponse.status == "Ok"){
-        this.router.navigate(["menuAdmin"]);
+        this.router.navigate(["menuCliente"]);
       }
       if(dataResponse.status == "Error"){
         alert("Usuario o contraseña incorrectos");

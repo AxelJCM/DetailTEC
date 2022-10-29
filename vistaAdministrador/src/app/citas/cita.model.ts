@@ -4,6 +4,6 @@ export class Citas{
     ccliente = "";
     cplaca = "";
     csucursal = "";
-    /* ccedula?:number; */
+    cccedula?:number;
 
 }    

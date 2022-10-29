@@ -44,6 +44,4 @@ export class CitasComponent implements OnInit {
   editCita(citas: Citas){
     this.citaAEditar = citas;
   }
-
-
 }

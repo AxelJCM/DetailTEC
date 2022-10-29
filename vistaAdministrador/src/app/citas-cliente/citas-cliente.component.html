@@ -10,7 +10,7 @@
         <div class="container-fluid">
           <h1 style="color: aliceblue;">Registro de citas</h1>
           <div class="d-flex">
-            <button type="button" (click)="crearCita()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Registrar</button>
+            <button type="button" (click)="crearClientesCita()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Registrar</button>
           </div>
         </div>
     </nav>
@@ -31,7 +31,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor="let cita of citas; let i=index">
+                          <tr *ngFor="let cita of Ccitas; let i=index">
                             <th scope="row">{{i+1}}</th>
                             <td>{{cita.ccliente}}</td>
                             <td>{{cita.cplaca}}</td>
@@ -46,8 +46,8 @@
         </div>
     </div>
 </body>
-<app-editar-citas
-[citas]="citaAEditar"
-(citasActualizados)="listaActualizada($event)"
-></app-editar-citas>
+<app-editar-citas-cliente
+[ccitas]="clienteCitaAEditar"
+(clienteCitasActualizados)="listaActualizada($event)"
+></app-editar-citas-cliente>
 </html>

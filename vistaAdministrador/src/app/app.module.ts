@@ -25,6 +25,8 @@ import { EditarCitasComponent } from './editar-citas/editar-citas.component';
 import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
 import { ClientesVistaClienteComponent } from './clientes-vista-cliente/clientes-vista-cliente.component';
 import { EditarClienteVistaClienteComponent } from './editar-cliente-vista-cliente/editar-cliente-vista-cliente.component';
+import { CitasClienteComponent } from './citas-cliente/citas-cliente.component';
+import { EditarCitasClienteComponent } from './editar-citas-cliente/editar-citas-cliente.component';
 
 const appRoutes:Routes=[
   /* {path: '', component:PrincipalComponent}, */
@@ -38,7 +40,8 @@ const appRoutes:Routes=[
   {path: 'menuAdmin', component:MenuComponent},
   {path: 'citas', component:CitasComponent},
   {path: 'menuCliente', component:MenuClienteComponent},
-  {path: 'vistaCliente-gestClientes', component: ClientesVistaClienteComponent}
+  {path: 'vistaCliente-gestClientes', component: ClientesVistaClienteComponent},
+  {path: 'vistaCliente-regCitas', component: CitasClienteComponent}
 
 ]
 
@@ -65,6 +68,8 @@ const appRoutes:Routes=[
     MenuClienteComponent,
     ClientesVistaClienteComponent,
     EditarClienteVistaClienteComponent,
+    CitasClienteComponent,
+    EditarCitasClienteComponent,
 
 
   ],

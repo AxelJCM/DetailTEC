@@ -159,8 +159,6 @@ namespace DetailTEC.Models
                     .IsUnicode(false)
                     .HasColumnName("CProvincia");
 
-                entity.Property(e => e.Cpuntos).HasColumnName("CPuntos");
-
                 entity.Property(e => e.Cusuario)
                     .HasMaxLength(50)
                     .IsUnicode(false)
@@ -240,17 +238,17 @@ namespace DetailTEC.Models
                     .IsUnicode(false)
                     .HasColumnName("PMarca");
 
+                entity.Property(e => e.Pplaca)
+                    .HasMaxLength(15)
+                    .IsUnicode(false)
+                    .HasColumnName("PPlaca");
+
                 entity.Property(e => e.Pnombre)
                     .HasMaxLength(15)
                     .IsUnicode(false)
                     .HasColumnName("PNombre");
 
                 entity.Property(e => e.Pcosto).HasColumnName("PCosto");
-
-                entity.Property(e => e.Pplaca)
-                    .HasMaxLength(15)
-                    .IsUnicode(false)
-                    .HasColumnName("PPlaca");
 
                 entity.Property(e => e.Pproveedores)
                     .HasMaxLength(20)
@@ -331,6 +329,11 @@ namespace DetailTEC.Models
                     .IsUnicode(false)
                     .HasColumnName("PPNombre");
 
+                entity.Property(e => e.Ppplaca)
+                    .HasMaxLength(15)
+                    .IsUnicode(false)
+                    .HasColumnName("PPPlaca");
+
                 entity.Property(e => e.Ppprovincia)
                     .HasMaxLength(20)
                     .IsUnicode(false)
@@ -354,7 +357,7 @@ namespace DetailTEC.Models
 
                 entity.HasOne(d => d.Pp)
                     .WithMany()
-                    .HasForeignKey(d => new { d.Ppmarca, d.Ppnombre })
+                    .HasForeignKey(d => new { d.Ppmarca, d.Ppplaca, d.Ppnombre })
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("PP_Producto_FK");
             });

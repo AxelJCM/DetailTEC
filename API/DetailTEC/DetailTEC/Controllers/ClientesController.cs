@@ -43,13 +43,9 @@ namespace DetailTEC.Controllers
 
         // PUT: api/Clientes/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCliente(int id, Cliente cliente)
+        [HttpPut]
+        public async Task<IActionResult> PutCliente(Cliente cliente)
         {
-            if (id != cliente.Ccedula)
-            {
-                return BadRequest();
-            }
 
             _context.Entry(cliente).State = EntityState.Modified;
 
@@ -59,7 +55,7 @@ namespace DetailTEC.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ClienteExists(id))
+                if (!ClienteExists(cliente.Ccedula))
                 {
                     return NotFound();
                 }
@@ -96,6 +92,36 @@ namespace DetailTEC.Controllers
 
             return CreatedAtAction("GetCliente", new { id = cliente.Ccedula }, cliente);
         }
+
+        [HttpPost]
+        [Route("Login/")]
+
+        public async Task<ActionResult<Login>> PostLogin(Auth auth)
+        {
+            var result = _context.Clientes.Any(e => e.Ccorreo == auth.Usuario && e.Cpassword == auth.Password);
+
+            var status = new Login { Status = "Ok" };
+
+            var error = new Login { Status = "Error" };
+
+            if (!result)
+            {
+                return error;
+            }
+
+                return Ok(status);
+
+        }
+
+        [HttpPost]
+        [Route("Puntos/")]
+
+        /*public async Task<ActionResult<Cliente>> PostPuntos(Cliente cliente)
+        {
+
+            var puntos = new Cliente { id = cliente.Cpuntos };
+
+        }*/
 
         // DELETE: api/Clientes/5
         [HttpDelete("{id}")]

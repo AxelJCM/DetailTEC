@@ -34,6 +34,4 @@ export class EditarTrabajadorComponent implements OnInit {
     .subscribe((trabajadores: Trabajador[]) => this.trabajadoresActualizados.emit(trabajadores));
   }
 
-
-
 }

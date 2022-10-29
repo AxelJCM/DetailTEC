@@ -9,7 +9,6 @@ namespace DetailTEC.Models
         public int? PpcedulaJuridica { get; set; }
         public string Psnombre { get; set; } = null!;
         public string Ppmarca { get; set; } = null!;
-        public string Ppplaca { get; set; } = null!;
         public int? Ppccedula { get; set; }
         public string? Ppcorreo { get; set; }
         public string? Ppcontacto { get; set; }

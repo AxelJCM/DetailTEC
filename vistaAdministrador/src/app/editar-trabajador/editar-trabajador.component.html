@@ -39,14 +39,21 @@
                           <span class="input-group-text" id="basic-addon1">Password</span>
                           <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tpassword">
                       </div>
-                      <div class="input-group mb-3">
-                          <span class="input-group-text" id="basic-addon1">Rol</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.trol">
+                      <div class="col-md-4">
+                        <label for="inputState" class="form-label">Rol</label>
+                        <select id="inputState" class="form-select" [(ngModel)]="trabajador.trol">
+                          <option>Lavador</option>
+                          <option>Pulidor</option>
+                        </select>
                       </div>
-                      <div class="input-group mb-3">
-                          <span class="input-group-text" id="basic-addon1">Tipo de pago</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tpago">
+                      <div class="col-md-4">
+                        <label for="inputState" class="form-label">Tipo de Pago</label>
+                        <select id="inputState" class="form-select" [(ngModel)]="trabajador.tpago">
+                          <option>Semanal</option>
+                          <option>Bisemanal</option>
+                        </select>
                       </div>
+                      <br>
                       <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Sucursal</span>
                         <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="trabajador.tsnombre">

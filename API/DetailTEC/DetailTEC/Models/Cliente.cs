@@ -19,6 +19,7 @@ namespace DetailTEC.Models
         public string? Cprovincia { get; set; }
         public string? Ccanton { get; set; }
         public string? Cdistrito { get; set; }
+        public int? Cpuntos { get; set; }
 
         public virtual ICollection<Cita> Cita { get; set; }
         public virtual ICollection<Telefono> Telefonos { get; set; }

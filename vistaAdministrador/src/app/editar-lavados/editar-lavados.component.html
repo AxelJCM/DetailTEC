@@ -43,16 +43,12 @@
                         <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="lavado.lpersonal">
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Puntuacion</span>
+                        <span class="input-group-text" id="basic-addon1">Puntuación</span>
                         <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="lavado.lpuntuacion">
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">sucursal</span>
-                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="lavado.lsnombre">
-                    </div>
-                      <button (click)="agregarLavado(lavado)" *ngIf="lavado.ltipoLavado && lavado.lsnombre" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
-                      <button (click)="borrarLavado(lavado)" *ngIf="lavado.ltipoLavado && lavado.lsnombre" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
-                      <button (click)="actualizarLavado(lavado)" *ngIf="lavado.ltipoLavado && lavado.lsnombre" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
+                      <button (click)="agregarLavado(lavado)" *ngIf="lavado.ltipoLavado" type="submit" class="btn btn-primary" style="margin-top: 20;">Insertar</button>
+                      <button (click)="borrarLavado(lavado)" *ngIf="lavado.ltipoLavado" type="submit" class="btn btn-primary" style="margin-top: 20;">Borrar</button>
+                      <button (click)="actualizarLavado(lavado)" *ngIf="lavado.ltipoLavado" type="submit" class="btn btn-primary" style="margin-top: 20;">Guardar</button>
                   </div>
                   <div class="col">
       

@@ -32,5 +32,4 @@ export class TrabajadoresComponent implements OnInit {
   editTrabajador(trabajadores: Trabajador){
     this.trabajadorAEditar = trabajadores;
   }
-
 }

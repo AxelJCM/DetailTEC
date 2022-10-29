@@ -1,7 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 .img-1 {
     background-image: url('Imagenes/img1.jpg');
     background-size: cover;
     background-position: center;
+}
+
+form{
+    margin-bottom: 50%;
 }
 
 .img-2 {
@@ -16,8 +21,9 @@
     background-position: center;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
+label{
+  color: #fff;
+}
 html{
   background: #030321;
   height: 100%;
@@ -34,7 +40,7 @@ body{
 }
 
 .container {
-  
+
   display: flex;
 
   height: 100%;

@@ -14,6 +14,7 @@ namespace DetailTEC.Models
         public string? Tpassword { get; set; }
         public string? Tpago { get; set; }
         public string? Trol { get; set; }
+        public string? Tusuario { get; set; }
         public string? Tsnombre { get; set; }
     }
 }
